@@ -1,0 +1,1 @@
+////  NSCopingUse.h//  FirstStydyProject////  Created by XiaoTian on 13-7-22.//  Copyright (c) 2013年 XiaoTian. All rights reserved.//#import <Foundation/Foundation.h>@interface NSCopingUse : NSObject<NSCopying>{    NSString *name;}@property(retain) NSString * name;-(id)initWithName:(NSString*)name;@end

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="C5q-mc-eci">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="8XH-r8-2Rz">
+            <objects>
+                <navigationController id="C5q-mc-eci" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nBl-jd-yZm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2NK-y2-aV4" kind="relationship" relationship="rootViewController" id="jv8-vy-ED4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bUi-4p-QCn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665" y="-168"/>
+        </scene>
+        <!--PUT-->
+        <scene sceneID="icu-Zg-qOc">
+            <objects>
+                <viewController id="eo4-1v-0NL" customClass="PutController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X15-hb-Th3"/>
+                        <viewControllerLayoutGuide type="bottom" id="QQl-a2-Jez"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2b2-YH-wiN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="85j-dp-1Jk">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="ytc-da-V0o">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="image PUT URL" minimumFontSize="17" id="4S8-0o-7ol">
+                                            <rect key="frame" x="16" y="7" width="230" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="eo4-1v-0NL" id="INc-We-WMG"/>
+                                            </connections>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="d5i-pD-AMN"/>
+                                    <barButtonItem style="plain" id="G2V-T3-QVQ">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5ui-lw-ec4">
+                                            <rect key="frame" x="256" y="7" width="48" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Cancel">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <connections>
+                                            <action selector="cancelAction:" destination="eo4-1v-0NL" id="W8M-e4-PQA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="5Ls-Vp-Wrk">
+                                <rect key="frame" x="289" y="289" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WbU-L7-ENx">
+                                <rect key="frame" x="177" y="207" width="120" height="90"/>
+                                <state key="normal" image="TestImage1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="eo4-1v-0NL" eventType="touchUpInside" id="33d-KN-PBO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugM-Dz-XE7">
+                                <rect key="frame" x="300" y="207" width="120" height="90"/>
+                                <state key="normal" image="TestImage2.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="eo4-1v-0NL" eventType="touchUpInside" id="4bf-b6-pf9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAd-1P-hFX">
+                                <rect key="frame" x="177" y="300" width="120" height="90"/>
+                                <state key="normal" image="TestImage3.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="eo4-1v-0NL" eventType="touchUpInside" id="VMy-du-VRL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRD-5P-Mte">
+                                <rect key="frame" x="300" y="300" width="120" height="90"/>
+                                <state key="normal" image="TestImage4.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="eo4-1v-0NL" eventType="touchUpInside" id="a3Z-zS-OiP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Put Status Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRK-Yd-rA1">
+                                <rect key="frame" x="235" y="108" width="127" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="dZU-Pg-Hpo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zRK-Yd-rA1" firstAttribute="centerX" secondItem="5Ls-Vp-Wrk" secondAttribute="centerX" id="Fto-eR-Jnq"/>
+                            <constraint firstAttribute="centerX" secondItem="5Ls-Vp-Wrk" secondAttribute="centerX" constant="1" id="LPY-OT-YXe"/>
+                            <constraint firstItem="zRK-Yd-rA1" firstAttribute="top" secondItem="2b2-YH-wiN" secondAttribute="top" constant="108" id="SO8-ig-UxI"/>
+                            <constraint firstAttribute="centerY" secondItem="5Ls-Vp-Wrk" secondAttribute="centerY" constant="1" id="XMY-q5-9cy"/>
+                            <constraint firstItem="ugM-Dz-XE7" firstAttribute="top" secondItem="zRK-Yd-rA1" secondAttribute="bottom" constant="78" id="ZbK-B6-1le"/>
+                            <constraint firstItem="zRK-Yd-rA1" firstAttribute="top" secondItem="85j-dp-1Jk" secondAttribute="bottom" id="vf8-Gb-hnr"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="PUT" id="guq-L6-EQR"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="5Ls-Vp-Wrk" id="0aJ-eA-q4c"/>
+                        <outlet property="cancelButton" destination="G2V-T3-QVQ" id="HjA-bB-seT"/>
+                        <outlet property="statusLabel" destination="zRK-Yd-rA1" id="cbw-p2-FIB"/>
+                        <outlet property="urlText" destination="4S8-0o-7ol" id="9hT-Of-drY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jH9-Zk-WBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1968" y="612"/>
+        </scene>
+        <!--POST-->
+        <scene sceneID="j1q-8k-tfn">
+            <objects>
+                <viewController id="znJ-ca-7bg" customClass="PostController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cmr-YO-S5X"/>
+                        <viewControllerLayoutGuide type="bottom" id="z8a-z4-9de"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W4n-xm-41R">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="X3z-sV-sLu">
+                                <rect key="frame" x="289" y="289" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4V9-5a-9ii">
+                                <rect key="frame" x="16" y="64" width="568" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="Ikt-ie-K49">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="image PUT URL" minimumFontSize="17" id="4Fi-I0-Pqo">
+                                            <rect key="frame" x="16" y="7" width="230" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="znJ-ca-7bg" id="7Gk-zs-N4f"/>
+                                            </connections>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="49t-VL-3yY"/>
+                                    <barButtonItem title="Cancel" id="Q6i-eA-iip">
+                                        <connections>
+                                            <action selector="cancelAction:" destination="znJ-ca-7bg" id="YYT-aW-ejc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9Y-r5-fiI">
+                                <rect key="frame" x="176" y="206" width="120" height="90"/>
+                                <state key="normal" image="TestImage1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="znJ-ca-7bg" eventType="touchUpInside" id="J3P-RP-L9L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oe-Ht-m7V">
+                                <rect key="frame" x="304" y="206" width="120" height="90"/>
+                                <state key="normal" image="TestImage2.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="znJ-ca-7bg" eventType="touchUpInside" id="g8W-JT-70Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXt-Na-gQN">
+                                <rect key="frame" x="304" y="300" width="120" height="90"/>
+                                <state key="normal" image="TestImage4.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="znJ-ca-7bg" eventType="touchUpInside" id="tnF-7t-OnP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post Status Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGT-f7-zb6">
+                                <rect key="frame" x="179" y="108" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R41-FO-sKA">
+                                <rect key="frame" x="176" y="300" width="120" height="90"/>
+                                <state key="normal" image="TestImage3.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="znJ-ca-7bg" eventType="touchUpInside" id="Oyx-bU-qJe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4V9-5a-9ii" firstAttribute="leading" secondItem="W4n-xm-41R" secondAttribute="leadingMargin" id="9Lj-kY-j4N"/>
+                            <constraint firstItem="4V9-5a-9ii" firstAttribute="top" secondItem="Cmr-YO-S5X" secondAttribute="bottom" id="Q0y-te-ugn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4V9-5a-9ii" secondAttribute="trailing" id="Y68-AQ-vFG"/>
+                            <constraint firstAttribute="centerX" secondItem="X3z-sV-sLu" secondAttribute="centerX" constant="1" id="aQ4-es-ccf"/>
+                            <constraint firstAttribute="centerY" secondItem="X3z-sV-sLu" secondAttribute="centerY" constant="1" id="plC-Eg-s2c"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="POST" id="g0M-7x-oeR"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="X3z-sV-sLu" id="K0w-Uo-MhT"/>
+                        <outlet property="cancelButton" destination="Q6i-eA-iip" id="bYN-vU-BxW"/>
+                        <outlet property="statusLabel" destination="SGT-f7-zb6" id="CaO-IR-uxF"/>
+                        <outlet property="urlText" destination="4Fi-I0-Pqo" id="B85-vh-hyC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Yj-hX-1c8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1315" y="612"/>
+        </scene>
+        <!--GET-->
+        <scene sceneID="7Rx-ae-F6s">
+            <objects>
+                <viewController id="cyC-oS-fDg" customClass="GetController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ep9-qh-PxA"/>
+                        <viewControllerLayoutGuide type="bottom" id="rL5-u7-jn0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yQn-7P-JA0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="get status label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLF-xA-gQr" userLabel="StatusLabel">
+                                <rect key="frame" x="16" y="108" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Sc2-0Q-rA5">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tbg-Ul-93x">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="974-4h-dQs">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Image URL" minimumFontSize="17" clearButtonMode="always" id="Ntb-yR-4I1">
+                                            <rect key="frame" x="16" y="7" width="230" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vVg-Jo-yH3"/>
+                                    <barButtonItem style="plain" id="fqh-Ll-zKw">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xN4-bY-Q7l">
+                                            <rect key="frame" x="506" y="7" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Get">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="getOrCancelAction:" destination="cyC-oS-fDg" eventType="touchUpInside" id="kBe-a1-bke"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="e3R-qr-y1P">
+                                <rect key="frame" x="16" y="254" width="568" height="90"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="xLF-xA-gQr" secondAttribute="trailing" id="CK4-Ag-thD"/>
+                            <constraint firstItem="xLF-xA-gQr" firstAttribute="top" secondItem="Tbg-Ul-93x" secondAttribute="bottom" id="EPg-lS-Uvj"/>
+                            <constraint firstAttribute="centerX" secondItem="e3R-qr-y1P" secondAttribute="centerX" constant="1" id="GhK-uh-ogj"/>
+                            <constraint firstItem="Tbg-Ul-93x" firstAttribute="leading" secondItem="yQn-7P-JA0" secondAttribute="leadingMargin" constant="-16" id="ImN-bG-0Gp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tbg-Ul-93x" secondAttribute="trailing" constant="-16" id="LsP-wu-Idg"/>
+                            <constraint firstItem="e3R-qr-y1P" firstAttribute="leading" secondItem="yQn-7P-JA0" secondAttribute="leadingMargin" id="R5R-tL-23w"/>
+                            <constraint firstItem="xLF-xA-gQr" firstAttribute="leading" secondItem="yQn-7P-JA0" secondAttribute="leadingMargin" id="cWO-Qb-8YF"/>
+                            <constraint firstAttribute="centerX" secondItem="Sc2-0Q-rA5" secondAttribute="centerX" constant="1" id="iN7-kD-kgM"/>
+                            <constraint firstAttribute="centerY" secondItem="e3R-qr-y1P" secondAttribute="centerY" constant="1" id="ngM-e4-vUJ"/>
+                            <constraint firstAttribute="centerY" secondItem="Sc2-0Q-rA5" secondAttribute="centerY" constant="1" id="xHw-fQ-Ahe"/>
+                            <constraint firstItem="e3R-qr-y1P" firstAttribute="trailing" secondItem="yQn-7P-JA0" secondAttribute="trailingMargin" id="yPh-1A-Zmm"/>
+                            <constraint firstItem="Tbg-Ul-93x" firstAttribute="top" secondItem="ep9-qh-PxA" secondAttribute="bottom" id="yy4-cD-a66"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="GET" id="V60-py-Ux0"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Sc2-0Q-rA5" id="bkc-8u-QlC"/>
+                        <outlet property="getOrCancelButton" destination="fqh-Ll-zKw" id="UXV-SC-rm3"/>
+                        <outlet property="imageView" destination="e3R-qr-y1P" id="dJI-RL-ur1"/>
+                        <outlet property="searchDisplayController" destination="mGh-GG-c8z" id="k2z-hK-ZmK"/>
+                        <outlet property="statusLabel" destination="xLF-xA-gQr" id="I90-3Q-UHM"/>
+                        <outlet property="urlText" destination="Ntb-yR-4I1" id="V9i-xZ-qr2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lk0-U0-pRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="mGh-GG-c8z">
+                    <connections>
+                        <outlet property="delegate" destination="cyC-oS-fDg" id="I7g-wk-dto"/>
+                        <outlet property="searchContentsController" destination="cyC-oS-fDg" id="np8-Oh-Ggc"/>
+                        <outlet property="searchResultsDataSource" destination="cyC-oS-fDg" id="Rij-59-WhS"/>
+                        <outlet property="searchResultsDelegate" destination="cyC-oS-fDg" id="dUq-S2-zoh"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="678" y="612"/>
+        </scene>
+        <!--SimpleURLConnections-->
+        <scene sceneID="6g4-R0-Wb8">
+            <objects>
+                <tabBarController id="2NK-y2-aV4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="SimpleURLConnections" id="xJO-gt-4RH">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="uTk-KU-j4G">
+                            <connections>
+                                <action selector="dismissViewController:" destination="2NK-y2-aV4" id="pQl-6K-4yb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="zbb-tv-rot">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cyC-oS-fDg" kind="relationship" relationship="viewControllers" id="J08-8R-aNj"/>
+                        <segue destination="znJ-ca-7bg" kind="relationship" relationship="viewControllers" id="WBr-Hh-mfE"/>
+                        <segue destination="eo4-1v-0NL" kind="relationship" relationship="viewControllers" id="Xju-le-hE7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WuW-MR-xdr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1317" y="-168"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NoImage.png" width="120" height="90"/>
+        <image name="TestImage1.png" width="120" height="90"/>
+        <image name="TestImage2.png" width="120" height="90"/>
+        <image name="TestImage3.png" width="120" height="90"/>
+        <image name="TestImage4.png" width="120" height="90"/>
+    </resources>
+</document>

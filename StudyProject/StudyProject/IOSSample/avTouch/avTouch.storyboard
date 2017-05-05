@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lfW-Z9-iSl">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="zeR-LZ-9BQ">
+            <objects>
+                <navigationController id="lfW-Z9-iSl" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="36T-b4-KCZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="apu-vZ-Do8" kind="relationship" relationship="rootViewController" id="v9K-rq-loz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ily-Jg-XVs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-115" y="309"/>
+        </scene>
+        <!--AVTouch-->
+        <scene sceneID="GoU-f0-6ap">
+            <objects>
+                <viewController id="apu-vZ-Do8" customClass="avTouchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0kh-hD-0ET"/>
+                        <viewControllerLayoutGuide type="bottom" id="YxO-Ls-4aM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d2V-Xc-OiS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sound_meter_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="hPK-7D-Ues">
+                                <rect key="frame" x="16" y="139" width="568" height="89"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tD-Px-53o">
+                                <rect key="frame" x="0.0" y="74" width="600" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="db0-ib-SL2">
+                                <rect key="frame" x="20" y="104" width="33.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNe-Gn-vl8">
+                                <rect key="frame" x="556" y="104" width="33.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RRg-ec-StK">
+                                <rect key="frame" x="61" y="99" width="487" height="31"/>
+                                <connections>
+                                    <action selector="progressSliderMoved:" destination="fbs-YM-eAC" eventType="valueChanged" id="DyI-Kb-cGZ"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvT-No-s3t" customClass="CALevelMeter">
+                                <rect key="frame" x="182" y="151" width="237" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="237" id="OOg-ff-QCz"/>
+                                    <constraint firstAttribute="height" constant="61" id="ebJ-rM-wwt"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sound_meter_glare.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fnp-6i-VFV">
+                                <rect key="frame" x="16" y="139" width="568" height="89"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="volume_up.png" translatesAutoresizingMaskIntoConstraints="NO" id="CHG-rW-tVD">
+                                <rect key="frame" x="558" y="248" width="22" height="21"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wic-yh-zNf">
+                                <rect key="frame" x="35" y="244" width="513" height="31"/>
+                                <connections>
+                                    <action selector="volumeSliderMoved:" destination="fbs-YM-eAC" eventType="valueChanged" id="5FX-W8-ESk"/>
+                                </connections>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="volume_down.png" translatesAutoresizingMaskIntoConstraints="NO" id="9zq-x3-bnB">
+                                <rect key="frame" x="20" y="248" width="9" height="15"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="e0E-k6-DI9">
+                                <rect key="frame" x="0.0" y="507" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="RmP-hg-3a3"/>
+                                    <barButtonItem style="plain" id="cP1-Vz-RQY">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gue-C3-2a7">
+                                            <rect key="frame" x="133" y="-2" width="28" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="avTouch_rewind.png">
+                                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="ffwButtonPressed:" destination="fbs-YM-eAC" eventType="touchDown" id="iWt-ve-2MS"/>
+                                                <action selector="rewButtonPressed:" destination="fbs-YM-eAC" eventType="touchDown" id="vYB-WH-9te"/>
+                                                <action selector="rewButtonReleased:" destination="fbs-YM-eAC" eventType="touchDragOutside" id="0mo-Wx-dqj"/>
+                                                <action selector="rewButtonReleased:" destination="fbs-YM-eAC" eventType="touchUpOutside" id="eYX-PD-2fc"/>
+                                                <action selector="rewButtonReleased:" destination="fbs-YM-eAC" eventType="touchUpInside" id="kV4-4M-F2a"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="W04-2v-mbb"/>
+                                    <barButtonItem style="plain" id="cG5-rG-ROI">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nCN-sJ-0zV">
+                                            <rect key="frame" x="289" y="11" width="28" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="avTouch_play.png">
+                                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="playButtonPressed:" destination="fbs-YM-eAC" eventType="touchDown" id="C6U-gN-JW4"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="GNP-oP-fCH"/>
+                                    <barButtonItem style="plain" id="2BL-i5-Q1e">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Iz0-aW-DYl">
+                                            <rect key="frame" x="230" y="7" width="28" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="avTouch_forward.png">
+                                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="ffwButtonPressed:" destination="fbs-YM-eAC" eventType="touchDown" id="nMO-5Y-6Zi"/>
+                                                <action selector="ffwButtonReleased:" destination="fbs-YM-eAC" eventType="touchUpOutside" id="I4R-mh-9fP"/>
+                                                <action selector="ffwButtonReleased:" destination="fbs-YM-eAC" eventType="touchUpInside" id="lLE-XD-z6c"/>
+                                                <action selector="ffwButtonReleased:" destination="fbs-YM-eAC" eventType="touchDragOutside" id="zlB-cA-uAX"/>
+                                                <action selector="rewButtonReleased:" destination="fbs-YM-eAC" eventType="touchUpInside" id="bWq-Qc-t9e"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MMg-IT-dwY"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YxO-Ls-4aM" firstAttribute="top" secondItem="e0E-k6-DI9" secondAttribute="bottom" id="0gA-IS-Jkz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fnp-6i-VFV" secondAttribute="trailing" id="4dW-M6-Ics"/>
+                            <constraint firstItem="fNe-Gn-vl8" firstAttribute="leading" secondItem="RRg-ec-StK" secondAttribute="trailing" constant="10" id="4sf-lb-J9m"/>
+                            <constraint firstItem="Fnp-6i-VFV" firstAttribute="leading" secondItem="d2V-Xc-OiS" secondAttribute="leadingMargin" id="4wS-2x-uyB"/>
+                            <constraint firstAttribute="centerX" secondItem="hPK-7D-Ues" secondAttribute="centerX" id="5SK-NA-WBp"/>
+                            <constraint firstItem="6tD-Px-53o" firstAttribute="top" secondItem="0kh-hD-0ET" secondAttribute="bottom" constant="10" id="EaA-Qp-VGr"/>
+                            <constraint firstAttribute="trailing" secondItem="6tD-Px-53o" secondAttribute="trailing" id="EyW-Nk-iV3"/>
+                            <constraint firstItem="9zq-x3-bnB" firstAttribute="top" secondItem="Fnp-6i-VFV" secondAttribute="bottom" constant="20" id="P90-Vn-gea"/>
+                            <constraint firstItem="CHG-rW-tVD" firstAttribute="top" secondItem="Fnp-6i-VFV" secondAttribute="bottom" constant="20" id="Q8Q-Eu-TKA"/>
+                            <constraint firstAttribute="trailing" secondItem="e0E-k6-DI9" secondAttribute="trailing" id="Rue-ia-S7h"/>
+                            <constraint firstAttribute="centerX" secondItem="Fnp-6i-VFV" secondAttribute="centerX" id="S4b-U5-Wi2"/>
+                            <constraint firstItem="Fnp-6i-VFV" firstAttribute="top" secondItem="RRg-ec-StK" secondAttribute="bottom" constant="10" id="S8X-Qq-Q35"/>
+                            <constraint firstItem="RRg-ec-StK" firstAttribute="leading" secondItem="db0-ib-SL2" secondAttribute="trailing" constant="10" id="VHH-cF-jXz"/>
+                            <constraint firstItem="hPK-7D-Ues" firstAttribute="top" secondItem="RRg-ec-StK" secondAttribute="bottom" constant="10" id="VUx-m5-HHe"/>
+                            <constraint firstItem="e0E-k6-DI9" firstAttribute="leading" secondItem="d2V-Xc-OiS" secondAttribute="leading" id="W7Z-df-Vq7"/>
+                            <constraint firstItem="db0-ib-SL2" firstAttribute="leading" secondItem="d2V-Xc-OiS" secondAttribute="leading" constant="20" id="XqG-i5-E53"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hPK-7D-Ues" secondAttribute="trailing" id="Xvh-Co-mOU"/>
+                            <constraint firstAttribute="centerX" secondItem="rvT-No-s3t" secondAttribute="centerX" id="YLw-tX-JO8"/>
+                            <constraint firstItem="CHG-rW-tVD" firstAttribute="leading" secondItem="wic-yh-zNf" secondAttribute="trailing" constant="10" id="ZKE-9C-Y2A"/>
+                            <constraint firstItem="9zq-x3-bnB" firstAttribute="leading" secondItem="d2V-Xc-OiS" secondAttribute="leading" constant="20" id="cnp-7j-QVS"/>
+                            <constraint firstItem="db0-ib-SL2" firstAttribute="top" secondItem="6tD-Px-53o" secondAttribute="bottom" constant="10" id="eGs-6p-16l"/>
+                            <constraint firstItem="rvT-No-s3t" firstAttribute="top" secondItem="RRg-ec-StK" secondAttribute="bottom" constant="22" id="jpH-1L-LxR"/>
+                            <constraint firstAttribute="trailing" secondItem="CHG-rW-tVD" secondAttribute="trailing" constant="20" id="lAH-A0-qg7"/>
+                            <constraint firstItem="6tD-Px-53o" firstAttribute="leading" secondItem="d2V-Xc-OiS" secondAttribute="leading" id="ouq-Cd-3vn"/>
+                            <constraint firstItem="RRg-ec-StK" firstAttribute="top" secondItem="6tD-Px-53o" secondAttribute="bottom" constant="5" id="rQD-FM-Z82"/>
+                            <constraint firstItem="hPK-7D-Ues" firstAttribute="leading" secondItem="d2V-Xc-OiS" secondAttribute="leadingMargin" id="rne-lZ-7wJ"/>
+                            <constraint firstItem="fNe-Gn-vl8" firstAttribute="top" secondItem="6tD-Px-53o" secondAttribute="bottom" constant="10" id="z4l-yE-aMC"/>
+                            <constraint firstAttribute="trailing" secondItem="fNe-Gn-vl8" secondAttribute="trailing" constant="10" id="zjf-u6-GI4"/>
+                            <constraint firstItem="wic-yh-zNf" firstAttribute="leading" secondItem="9zq-x3-bnB" secondAttribute="trailing" constant="10" id="zmy-jm-UOJ"/>
+                            <constraint firstItem="wic-yh-zNf" firstAttribute="top" secondItem="Fnp-6i-VFV" secondAttribute="bottom" constant="15" id="zxd-gV-qAQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="AVTouch" id="RMI-Zs-JKl">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="ZWh-Fj-3e2">
+                            <connections>
+                                <action selector="dismissViewController:" destination="apu-vZ-Do8" id="nMf-5X-cQj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q7d-y7-3qZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="fbs-YM-eAC" customClass="avTouchController">
+                    <connections>
+                        <outlet property="currentTime" destination="db0-ib-SL2" id="SHY-Wi-uE0"/>
+                        <outlet property="duration" destination="fNe-Gn-vl8" id="CuD-bQ-36Y"/>
+                        <outlet property="ffwButton" destination="Iz0-aW-DYl" id="8R9-Ob-Nmj"/>
+                        <outlet property="fileName" destination="6tD-Px-53o" id="vuG-l1-vdi"/>
+                        <outlet property="lvlMeter_in" destination="rvT-No-s3t" id="6AU-zX-oY2"/>
+                        <outlet property="playButton" destination="nCN-sJ-0zV" id="zgZ-ic-2qc"/>
+                        <outlet property="progressBar" destination="RRg-ec-StK" id="OXN-LY-MzC"/>
+                        <outlet property="rewButton" destination="gue-C3-2a7" id="PlX-jv-NTN"/>
+                        <outlet property="volumeSlider" destination="wic-yh-zNf" id="KEK-8k-bJA"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="569" y="309"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="avTouch_forward.png" width="28" height="21"/>
+        <image name="avTouch_play.png" width="23" height="21"/>
+        <image name="avTouch_rewind.png" width="28" height="21"/>
+        <image name="sound_meter_background.png" width="265" height="89"/>
+        <image name="sound_meter_glare.png" width="265" height="89"/>
+        <image name="volume_down.png" width="9" height="15"/>
+        <image name="volume_up.png" width="22" height="21"/>
+    </resources>
+</document>

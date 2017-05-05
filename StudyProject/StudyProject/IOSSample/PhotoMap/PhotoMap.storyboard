@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xmg-0k-Mtt">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Xi6-EJ-evj">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Xmg-0k-Mtt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V59-Qx-PiH">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="h7Q-gg-rGA" kind="relationship" relationship="rootViewController" id="aVk-MN-KKZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QaG-Uf-mJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="-5"/>
+        </scene>
+        <!--PhotoMap-->
+        <scene sceneID="cXL-tH-CXa">
+            <objects>
+                <viewController id="h7Q-gg-rGA" customClass="PhotoMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jVw-Xh-kBW"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZxN-Z4-Lfm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RAQ-gv-b0i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="M9W-WP-FFd">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <connections>
+                                    <outlet property="delegate" destination="h7Q-gg-rGA" id="S9G-bb-UPG"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="M9W-WP-FFd" secondAttribute="trailing" constant="-16" id="Yzw-t1-YvI"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="M9W-WP-FFd" secondAttribute="bottom" id="jgM-C8-jGc"/>
+                            <constraint firstItem="M9W-WP-FFd" firstAttribute="leading" secondItem="RAQ-gv-b0i" secondAttribute="leadingMargin" constant="-16" id="ra1-vK-aeS"/>
+                            <constraint firstItem="M9W-WP-FFd" firstAttribute="top" secondItem="jVw-Xh-kBW" secondAttribute="bottom" id="rec-Hs-5RP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="PhotoMap" id="ke6-ed-2k7">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="JKk-M1-izn">
+                            <connections>
+                                <action selector="dismissViewController:" destination="h7Q-gg-rGA" id="gxL-eX-ZHC"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Go" id="bSE-ka-ypl">
+                            <connections>
+                                <action selector="zoomToCherryLake:" destination="h7Q-gg-rGA" id="3v6-5y-iCi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="M9W-WP-FFd" id="hFi-6z-2y9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p66-bk-Wgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="509" y="-5"/>
+        </scene>
+        <!--Photo Map Data View Controller-->
+        <scene sceneID="hiI-UQ-HaK">
+            <objects>
+                <viewController storyboardIdentifier="PhotoMapDataViewController" id="gmh-Oe-wvr" customClass="PhotoMapDataViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1o5-x3-Enh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q6d-el-qex"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VAD-G4-pK8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u9L-1n-bRC">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="u9L-1n-bRC" secondAttribute="trailing" id="0n9-9r-X3g"/>
+                            <constraint firstItem="u9L-1n-bRC" firstAttribute="leading" secondItem="VAD-G4-pK8" secondAttribute="leading" id="85R-rM-otF"/>
+                            <constraint firstItem="u9L-1n-bRC" firstAttribute="top" secondItem="1o5-x3-Enh" secondAttribute="bottom" id="Fkk-UF-rhr"/>
+                            <constraint firstItem="Q6d-el-qex" firstAttribute="top" secondItem="u9L-1n-bRC" secondAttribute="bottom" id="sDj-2U-krB"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="imageView" destination="u9L-1n-bRC" id="bF1-na-xhV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ah-Kb-UzG" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908" y="-5"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

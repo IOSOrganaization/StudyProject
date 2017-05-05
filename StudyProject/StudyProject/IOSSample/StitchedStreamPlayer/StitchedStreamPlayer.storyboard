@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yet-LV-COE">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Rez-k6-Tey">
+            <objects>
+                <navigationController id="yet-LV-COE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XzQ-nK-x6P">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="c11-pN-SaY" kind="relationship" relationship="rootViewController" id="nns-6i-HsR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i3J-J8-Fq4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-263" y="239"/>
+        </scene>
+        <!--StitchedStreamPlayer-->
+        <scene sceneID="tEQ-M8-7M6">
+            <objects>
+                <viewController id="c11-pN-SaY" customClass="MyStreamingMovieViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Aku-Dm-Wxd"/>
+                        <viewControllerLayoutGuide type="bottom" id="97y-yt-2RP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oW7-Wd-1eb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a valid movie URL:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Koq-ys-dxT">
+                                <rect key="frame" x="16" y="74" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://devimages.apple.com/samplecode/adDemo/ad.m3u8" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="6PT-Ka-QAu">
+                                <rect key="frame" x="16" y="94" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="c11-pN-SaY" id="IaG-eU-Xj2"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qib-61-bmM">
+                                <rect key="frame" x="251" y="134" width="95" height="34"/>
+                                <state key="normal" title="Load Movie">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadMovieButtonPressed:" destination="c11-pN-SaY" eventType="touchUpInside" id="NNN-1a-RG0"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="INo-KI-D2r" customClass="MyPlayerLayerView">
+                                <rect key="frame" x="16" y="168" width="568" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDh-QZ-I4u">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Play" id="4j3-nX-7P6">
+                                        <connections>
+                                            <action selector="play:" destination="c11-pN-SaY" id="kfH-pe-qWg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Pause" id="GF0-5h-q6E">
+                                        <connections>
+                                            <action selector="pause:" destination="c11-pN-SaY" id="44J-nw-id5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLj-No-ZZk">
+                                <rect key="frame" x="16" y="529" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="HLj-No-ZZk" secondAttribute="trailing" id="72w-zM-OaE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Koq-ys-dxT" secondAttribute="trailing" id="7Qx-Hc-Gf9"/>
+                            <constraint firstItem="INo-KI-D2r" firstAttribute="top" secondItem="Qib-61-bmM" secondAttribute="bottom" id="85i-be-itp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6PT-Ka-QAu" secondAttribute="trailing" id="8Dd-kj-U4R"/>
+                            <constraint firstItem="6PT-Ka-QAu" firstAttribute="top" secondItem="Aku-Dm-Wxd" secondAttribute="bottom" constant="30" id="BAf-AT-4K9"/>
+                            <constraint firstItem="INo-KI-D2r" firstAttribute="trailing" secondItem="oW7-Wd-1eb" secondAttribute="trailingMargin" id="Gfe-gr-Yaf"/>
+                            <constraint firstItem="oDh-QZ-I4u" firstAttribute="top" secondItem="HLj-No-ZZk" secondAttribute="bottom" constant="6.5" id="Lsz-s8-1dM"/>
+                            <constraint firstItem="Koq-ys-dxT" firstAttribute="top" secondItem="Aku-Dm-Wxd" secondAttribute="bottom" constant="10" id="dKr-Ye-RAZ"/>
+                            <constraint firstAttribute="centerX" secondItem="Qib-61-bmM" secondAttribute="centerX" constant="1" id="fnS-XL-bwt"/>
+                            <constraint firstItem="Koq-ys-dxT" firstAttribute="leading" secondItem="oW7-Wd-1eb" secondAttribute="leadingMargin" id="fpL-lb-U9C"/>
+                            <constraint firstItem="Qib-61-bmM" firstAttribute="top" secondItem="6PT-Ka-QAu" secondAttribute="bottom" constant="10" id="iQh-ew-UND"/>
+                            <constraint firstItem="6PT-Ka-QAu" firstAttribute="leading" secondItem="oW7-Wd-1eb" secondAttribute="leadingMargin" id="pT5-SK-v9Z"/>
+                            <constraint firstItem="97y-yt-2RP" firstAttribute="top" secondItem="HLj-No-ZZk" secondAttribute="bottom" constant="50.5" id="tHx-5s-faT"/>
+                            <constraint firstItem="INo-KI-D2r" firstAttribute="leading" secondItem="oW7-Wd-1eb" secondAttribute="leadingMargin" id="u1A-eJ-xkr"/>
+                            <constraint firstItem="HLj-No-ZZk" firstAttribute="leading" secondItem="oW7-Wd-1eb" secondAttribute="leadingMargin" id="zXU-18-zum"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="StitchedStreamPlayer" id="7MX-Nz-lJ4">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="V5s-dJ-Nyq">
+                            <connections>
+                                <action selector="dismissViewController:" destination="c11-pN-SaY" id="hZB-Yl-Afw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="isPlayingAdText" destination="HLj-No-ZZk" id="ENY-kr-dkT"/>
+                        <outlet property="movieTimeControl" destination="K8K-6g-mCw" id="f8n-Gc-1p2"/>
+                        <outlet property="movieURLTextField" destination="6PT-Ka-QAu" id="QuQ-mo-8eC"/>
+                        <outlet property="playButton" destination="4j3-nX-7P6" id="HdO-QL-mZZ"/>
+                        <outlet property="playerLayerView" destination="INo-KI-D2r" id="Rnx-t1-jf0"/>
+                        <outlet property="stopButton" destination="GF0-5h-q6E" id="XMG-cg-lWW"/>
+                        <outlet property="toolBar" destination="oDh-QZ-I4u" id="SVh-MA-s7h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W8C-Ua-b5T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="K8K-6g-mCw">
+                    <rect key="frame" x="0.0" y="0.0" width="118" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <action selector="beginScrubbing:" destination="c11-pN-SaY" eventType="touchDown" id="trR-3k-xOf"/>
+                        <action selector="endScrubbing:" destination="c11-pN-SaY" eventType="touchUpInside" id="UZ4-4V-ikH"/>
+                        <action selector="endScrubbing:" destination="c11-pN-SaY" eventType="touchUpOutside" id="WBq-Xh-eiR"/>
+                        <action selector="scrub:" destination="c11-pN-SaY" eventType="touchDragInside" id="vEP-lR-g7O"/>
+                        <action selector="scrub:" destination="c11-pN-SaY" eventType="valueChanged" id="xRt-rd-fWf"/>
+                    </connections>
+                </slider>
+            </objects>
+            <point key="canvasLocation" x="408" y="239"/>
+        </scene>
+    </scenes>
+</document>

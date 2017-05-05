@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Hzw-Tc-KMJ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="IdW-sg-keU">
+            <objects>
+                <navigationController id="Hzw-Tc-KMJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jEY-Wn-lwY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Jxt-0H-GSv" kind="relationship" relationship="rootViewController" id="OrZ-7C-KdL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZL-7D-q9G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="423" y="205"/>
+        </scene>
+        <!--PocketCoreImage-->
+        <scene sceneID="ohW-lU-Olj">
+            <objects>
+                <viewController id="Jxt-0H-GSv" customClass="PocketCoreImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kn3-fZ-Qwr"/>
+                        <viewControllerLayoutGuide type="bottom" id="38G-hg-iFJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gh1-P8-fe9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lgn-xK-mOR" customClass="FilteredImageView">
+                                <rect key="frame" x="16" y="64" width="568" height="300"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="5LV-vW-meV"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="datasource" destination="Jxt-0H-GSv" id="nkT-ap-Wft"/>
+                                </connections>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="YKG-Pl-5T2">
+                                <rect key="frame" x="16" y="364" width="568" height="236"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Jxt-0H-GSv" id="ahj-fR-kyk"/>
+                                    <outlet property="delegate" destination="Jxt-0H-GSv" id="XZL-ZG-wcL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="38G-hg-iFJ" firstAttribute="top" secondItem="YKG-Pl-5T2" secondAttribute="bottom" id="0iq-LC-d8D"/>
+                            <constraint firstItem="Lgn-xK-mOR" firstAttribute="top" secondItem="Kn3-fZ-Qwr" secondAttribute="bottom" id="Cjz-OT-ZcH"/>
+                            <constraint firstItem="YKG-Pl-5T2" firstAttribute="leading" secondItem="gh1-P8-fe9" secondAttribute="leadingMargin" id="Hgu-3a-CBo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lgn-xK-mOR" secondAttribute="trailing" id="Jpu-r0-Ehn"/>
+                            <constraint firstItem="YKG-Pl-5T2" firstAttribute="trailing" secondItem="gh1-P8-fe9" secondAttribute="trailingMargin" id="hH7-si-skU"/>
+                            <constraint firstItem="Lgn-xK-mOR" firstAttribute="leading" secondItem="gh1-P8-fe9" secondAttribute="leadingMargin" id="ipf-8w-iRh"/>
+                            <constraint firstItem="YKG-Pl-5T2" firstAttribute="top" secondItem="Lgn-xK-mOR" secondAttribute="bottom" id="zCi-al-HWi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="PocketCoreImage" id="u1j-RX-iJU">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="84R-1N-IfE">
+                            <connections>
+                                <action selector="dismissViewController:" destination="Jxt-0H-GSv" id="rf3-M1-9x4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Clear All" id="TsC-Z0-UVU">
+                            <connections>
+                                <action selector="clearFilters:" destination="Jxt-0H-GSv" id="2Ou-fM-OMS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="Lgn-xK-mOR" id="Qsv-ez-eXq"/>
+                        <outlet property="tableView" destination="YKG-Pl-5T2" id="aiW-Xd-f7G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rns-cZ-MZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="205"/>
+        </scene>
+    </scenes>
+</document>

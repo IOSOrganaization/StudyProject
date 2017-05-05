@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3ag-Z1-eIH">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="SOV-QA-8aT">
+            <objects>
+                <navigationController id="3ag-Z1-eIH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3bG-Np-gRv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZWj-6y-Wnp" kind="relationship" relationship="rootViewController" id="f1W-UA-GB6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V4g-rE-tIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-216" y="238"/>
+        </scene>
+        <!--AVPlayerDemo-->
+        <scene sceneID="eYa-hY-PLR">
+            <objects>
+                <viewController id="ZWj-6y-Wnp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4ln-9A-eWk"/>
+                        <viewControllerLayoutGuide type="bottom" id="JuY-q1-q8m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KH2-o3-PtO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="AVPlayerDemo" id="MHL-Tq-qtC">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="iDG-9j-ebw">
+                            <connections>
+                                <action selector="dismissViewController:" destination="ZWj-6y-Wnp" id="fEs-2m-oJb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uhp-QA-eua" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="TAh-9S-GhV" customClass="AVPlayerDemoAppDelegate">
+                    <connections>
+                        <outlet property="cachedAssetBrowser" destination="ZWj-6y-Wnp" id="LWK-g2-6sh"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="506" y="238"/>
+        </scene>
+    </scenes>
+</document>

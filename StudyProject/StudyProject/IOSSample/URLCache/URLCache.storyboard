@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hkW-h5-axa">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="v0X-2B-8ZI">
+            <objects>
+                <navigationController id="hkW-h5-axa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xbT-78-dfm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Nwf-AT-WgK" kind="relationship" relationship="rootViewController" id="dm4-4p-PfQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VGL-sF-wAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17" y="275"/>
+        </scene>
+        <!--URLCacheController-->
+        <scene sceneID="xYB-8k-z8V">
+            <objects>
+                <viewController id="Nwf-AT-WgK" userLabel="URLCacheController" customClass="URLCacheController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9uT-BR-d6V"/>
+                        <viewControllerLayoutGuide type="bottom" id="15F-fD-hhH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="shf-Ba-JMN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Status message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf7-Ol-F6j">
+                                <rect key="frame" x="36" y="422" width="525" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Updated: Mon, Jul 18, 2008 10:46 AM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSd-Ri-YKp">
+                                <rect key="frame" x="36" y="458" width="525" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UtA-5J-mxU" userLabel="MyImageView">
+                                <rect key="frame" x="36" y="74" width="526" height="350"/>
+                                <color key="backgroundColor" red="0.69019609999999998" green="0.73725492000000004" blue="0.80000000999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QKt-wf-RWX">
+                                <rect key="frame" x="290" y="239" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GV8-A2-Kig">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Display Image" id="hLv-XO-gRQ">
+                                        <connections>
+                                            <action selector="onDisplayImage:" destination="Nwf-AT-WgK" id="dIt-rk-b2k"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="RF8-MD-n4D"/>
+                                    <barButtonItem title="Clean Cache" id="2ml-o4-KsG">
+                                        <connections>
+                                            <action selector="onClearCache:" destination="Nwf-AT-WgK" id="chl-BS-py5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVi-J3-Z50">
+                                <rect key="frame" x="36" y="487" width="525" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="uVi-J3-Z50" secondAttribute="trailing" constant="23" id="DhQ-e7-FIL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bf7-Ol-F6j" secondAttribute="trailing" constant="23" id="FOd-X1-CSt"/>
+                            <constraint firstItem="uVi-J3-Z50" firstAttribute="top" secondItem="QSd-Ri-YKp" secondAttribute="bottom" constant="8" id="KtW-Vq-fjw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GV8-A2-Kig" secondAttribute="trailing" constant="-16" id="Plk-aj-SO4"/>
+                            <constraint firstItem="UtA-5J-mxU" firstAttribute="top" secondItem="9uT-BR-d6V" secondAttribute="bottom" constant="10" id="WBU-zm-LeK"/>
+                            <constraint firstItem="UtA-5J-mxU" firstAttribute="leading" secondItem="shf-Ba-JMN" secondAttribute="leadingMargin" constant="20" id="WQa-gg-8jh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UtA-5J-mxU" secondAttribute="trailing" constant="22" id="cQ3-eF-Anv"/>
+                            <constraint firstItem="GV8-A2-Kig" firstAttribute="top" secondItem="uVi-J3-Z50" secondAttribute="bottom" constant="11" id="ceJ-zn-iXA"/>
+                            <constraint firstAttribute="centerX" secondItem="QKt-wf-RWX" secondAttribute="centerX" constant="1" id="cmr-GO-cIY"/>
+                            <constraint firstItem="bf7-Ol-F6j" firstAttribute="leading" secondItem="shf-Ba-JMN" secondAttribute="leadingMargin" constant="20" id="duX-dy-IoJ"/>
+                            <constraint firstAttribute="centerX" secondItem="UtA-5J-mxU" secondAttribute="centerX" constant="1" id="mzA-fC-uYk"/>
+                            <constraint firstItem="QSd-Ri-YKp" firstAttribute="top" secondItem="bf7-Ol-F6j" secondAttribute="bottom" constant="8" id="ouW-aM-YxY"/>
+                            <constraint firstAttribute="centerX" secondItem="UtA-5J-mxU" secondAttribute="centerX" constant="1" id="p9g-kj-twY"/>
+                            <constraint firstItem="uVi-J3-Z50" firstAttribute="top" secondItem="QSd-Ri-YKp" secondAttribute="bottom" constant="8" id="pCx-81-iYA"/>
+                            <constraint firstItem="QSd-Ri-YKp" firstAttribute="leading" secondItem="shf-Ba-JMN" secondAttribute="leadingMargin" constant="20" id="red-f6-PoL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QSd-Ri-YKp" secondAttribute="trailing" constant="23" id="sBa-qI-Gir"/>
+                            <constraint firstItem="bf7-Ol-F6j" firstAttribute="top" secondItem="9uT-BR-d6V" secondAttribute="bottom" constant="358" id="tJI-pY-63O"/>
+                            <constraint firstItem="uVi-J3-Z50" firstAttribute="leading" secondItem="shf-Ba-JMN" secondAttribute="leadingMargin" constant="20" id="wWj-vJ-JIg"/>
+                            <constraint firstItem="GV8-A2-Kig" firstAttribute="leading" secondItem="shf-Ba-JMN" secondAttribute="leadingMargin" constant="-16" id="xiS-C3-y0N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="UICache" id="gDl-ip-1fE">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="cem-yv-K60">
+                            <connections>
+                                <action selector="dismissViewController:" destination="Nwf-AT-WgK" id="OJt-By-z4l"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="QKt-wf-RWX" id="bzY-1F-XPL"/>
+                        <outlet property="dateField" destination="QSd-Ri-YKp" id="cpS-08-Xva"/>
+                        <outlet property="imageView" destination="UtA-5J-mxU" id="VHD-An-rRU"/>
+                        <outlet property="infoField" destination="uVi-J3-Z50" id="Q8K-9i-dIe"/>
+                        <outlet property="statusField" destination="bf7-Ol-F6j" id="Btm-QS-nRP"/>
+                        <outlet property="toolbarItem1" destination="hLv-XO-gRQ" id="7vT-uC-3tz"/>
+                        <outlet property="toolbarItem2" destination="2ml-o4-KsG" id="1KU-mV-coe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NdY-lq-E7n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706" y="275"/>
+        </scene>
+    </scenes>
+</document>

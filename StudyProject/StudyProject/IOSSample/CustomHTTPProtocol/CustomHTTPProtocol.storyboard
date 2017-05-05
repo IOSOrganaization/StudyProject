@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kqh-9B-iuD">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="W2D-uK-8CX">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="kqh-9B-iuD" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZSV-me-wu9">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rOl-8T-Vbn" kind="relationship" relationship="rootViewController" id="Pai-gr-PjA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PMx-yc-Rwo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188" y="48"/>
+        </scene>
+        <!--CustomHTTPProtocol-->
+        <scene sceneID="WOZ-qD-D8q">
+            <objects>
+                <viewController storyboardIdentifier="webView" id="rOl-8T-Vbn" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2cu-IG-1GR"/>
+                        <viewControllerLayoutGuide type="bottom" id="nbu-1L-i3A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FNN-7h-ola">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hrf-gS-v5a">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rOl-8T-Vbn" id="9oo-iO-48c"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hrf-gS-v5a" firstAttribute="leading" secondItem="FNN-7h-ola" secondAttribute="leading" id="7LC-hZ-Kdh"/>
+                            <constraint firstItem="hrf-gS-v5a" firstAttribute="top" secondItem="2cu-IG-1GR" secondAttribute="bottom" id="G7T-i5-bg1"/>
+                            <constraint firstAttribute="trailing" secondItem="hrf-gS-v5a" secondAttribute="trailing" id="jfz-HJ-ehc"/>
+                            <constraint firstItem="nbu-1L-i3A" firstAttribute="top" secondItem="hrf-gS-v5a" secondAttribute="bottom" id="jyw-y4-21E"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="CustomHTTPProtocol" id="CSI-oE-RPu">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="RbP-C1-abs">
+                            <connections>
+                                <action selector="dismissViewController:" destination="rOl-8T-Vbn" id="1Jl-tU-uDO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Sites" id="xHf-lF-BFH">
+                            <connections>
+                                <action selector="sitesAction:" destination="rOl-8T-Vbn" id="OeA-zj-cBu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="webView" destination="hrf-gS-v5a" id="Ahb-fv-FEh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f8y-A5-gNh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="rwm-eb-CQL" customClass="CustomHTTPProtocolObject">
+                    <connections>
+                        <outlet property="webViewController" destination="rOl-8T-Vbn" id="gWG-Tq-el6"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="578" y="48"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

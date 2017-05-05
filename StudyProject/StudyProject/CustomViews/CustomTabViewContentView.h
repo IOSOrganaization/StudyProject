@@ -1,0 +1,1 @@
+////  CustomTabViewContentView.h//  FirstStydyProject////  Created by XiaoTian on 13-6-9.//  Copyright (c) 2013年 XiaoTian. All rights reserved.//#import <UIKit/UIKit.h>@interface CustomTabViewContentView : UIView@property(nonatomic) NSInteger index;@property(retain, nonatomic) NSString *name; // retain : 保持对象, strong@end

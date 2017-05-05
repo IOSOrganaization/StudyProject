@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="d0J-vw-jRU">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Top Songs View Controller-->
+        <scene sceneID="iA4-qF-R4y">
+            <objects>
+                <navigationController id="d0J-vw-jRU" customClass="TopSongsViewController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KB1-TL-lUs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Okz-vy-Vyv" kind="relationship" relationship="rootViewController" id="G7f-yG-QTk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RnL-6N-dWE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115" y="309"/>
+        </scene>
+        <!--TopSongsSongsViewController-->
+        <scene sceneID="B49-dI-e7Y">
+            <objects>
+                <tableViewController id="Okz-vy-Vyv" userLabel="TopSongsSongsViewController" customClass="TopSongsSongsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Scc-n2-lss">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="bottom" id="3Uu-AZ-A8W">
+                            <rect key="frame" x="0.0" y="130" width="600" height="52"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mcH-Qb-0So">
+                                    <rect key="frame" x="20" y="10" width="560" height="33"/>
+                                    <segments>
+                                        <segment title="Rank Only"/>
+                                        <segment title="Categorize"/>
+                                    </segments>
+                                    <connections>
+                                        <action selector="changeFetchSectioning:" destination="Okz-vy-Vyv" eventType="valueChanged" id="WQw-5w-07L"/>
+                                    </connections>
+                                </segmentedControl>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="mcH-Qb-0So" firstAttribute="leading" secondItem="3Uu-AZ-A8W" secondAttribute="leading" constant="20" id="7TM-Hp-YVy"/>
+                                <constraint firstAttribute="trailing" secondItem="mcH-Qb-0So" secondAttribute="trailing" constant="20" id="Vx9-ZW-zd4"/>
+                                <constraint firstItem="mcH-Qb-0So" firstAttribute="top" secondItem="3Uu-AZ-A8W" secondAttribute="top" constant="10" id="f8C-Nv-weY"/>
+                                <constraint firstAttribute="bottom" secondItem="mcH-Qb-0So" secondAttribute="bottom" constant="10" id="hUt-i9-tJ1"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" id="IlH-eL-gdr">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IlH-eL-gdr" id="7os-PJ-myc">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BUc-4W-lX4" kind="show" identifier="showDetail" id="BAh-I4-Err"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Okz-vy-Vyv" id="34s-3m-2WU"/>
+                            <outlet property="delegate" destination="Okz-vy-Vyv" id="0q9-CN-c79"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="TopSongs" id="7nB-k8-Xl5">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="TD8-tF-oVw">
+                            <connections>
+                                <action selector="dismissViewController:" destination="Okz-vy-Vyv" id="WCY-cf-7JO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="fetchSectioningControl" destination="mcH-Qb-0So" id="IVI-oT-pyb"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JMT-Fw-rzI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770" y="309"/>
+        </scene>
+        <!--Song Details Controller-->
+        <scene sceneID="h8u-CT-VeF">
+            <objects>
+                <tableViewController id="BUc-4W-lX4" customClass="SongDetailsController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gJd-t1-1It">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongDetailCell" textLabel="wzr-Pe-ffl" detailTextLabel="gJ3-kE-d7M" style="IBUITableViewCellStyleValue1" id="22M-IL-XXe">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="22M-IL-XXe" id="Vgx-Be-icV">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wzr-Pe-ffl">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gJ3-kE-d7M">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BUc-4W-lX4" id="8d3-9J-5Ll"/>
+                            <outlet property="delegate" destination="BUc-4W-lX4" id="7Sz-Y2-Ya1"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eNM-uJ-XOh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1486" y="309"/>
+        </scene>
+    </scenes>
+</document>

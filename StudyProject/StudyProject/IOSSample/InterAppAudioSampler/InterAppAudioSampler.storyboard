@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="1uh-2q-FFP">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Inter App Audio Sampler View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="InterAppAudioSamplerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="54i-CD-ERr"/>
+                        <viewControllerLayoutGuide type="bottom" id="zW3-pr-xlb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j1x-Ch-545" customClass="CAUITransportView">
+                                <rect key="frame" x="142" y="119" width="281" height="71"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5E-de-CFL" customClass="CAUITransportButton">
+                                        <rect key="frame" x="100" y="39" width="27" height="27"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="togglePlayback:" destination="j1x-Ch-545" eventType="touchUpInside" id="YT3-wf-XqD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyC-ic-9Rb" customClass="CAUITransportButton">
+                                        <rect key="frame" x="172" y="39" width="27" height="27"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toggleRecording:" destination="j1x-Ch-545" eventType="touchUpInside" id="lXh-Dj-AHn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRt-Ls-gbc" customClass="CAUITransportButton">
+                                        <rect key="frame" x="20" y="39" width="27" height="27"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="rewindAction:" destination="j1x-Ch-545" eventType="touchUpInside" id="UUx-bI-70T"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uHx-k2-CBz">
+                                        <rect key="frame" x="229" y="39" width="35" height="27"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymr-Qu-Ih9">
+                                        <rect key="frame" x="85" y="7" width="56" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.1098039299" green="0.60392159219999997" blue="0.96078437569999997" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="highlightedColor" red="0.66677989130000004" green="0.64193346389999995" blue="0.64569538660000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="7Pa-Co-Ctc"/>
+                                    <constraint firstAttribute="height" constant="71" id="Ze5-lR-eV4"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="currentTime" destination="Ymr-Qu-Ih9" id="eaA-WR-Qub"/>
+                                    <outlet property="hostIconView" destination="uHx-k2-CBz" id="hj7-0S-0gV"/>
+                                    <outlet property="playPauseButton" destination="L5E-de-CFL" id="tpo-DX-AsO"/>
+                                    <outlet property="recordButton" destination="UyC-ic-9Rb" id="s22-gS-7Xw"/>
+                                    <outlet property="rewindButton" destination="gRt-Ls-gbc" id="IpL-7U-UBr"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsx-AG-02Q">
+                                <rect key="frame" x="119" y="64" width="329" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Vibraphone with Fans" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fmi-ZR-bLu">
+                                        <rect key="frame" x="20" y="11" width="235" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.77197697379999997" green="0.90228074599999997" blue="0.66002586949999997" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="U4n-dv-LV0"/>
+                                    <constraint firstAttribute="width" constant="329" id="y6I-sB-7pW"/>
+                                </constraints>
+                            </view>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lnf-TB-K0r" customClass="CAUIKeyboardView">
+                                <rect key="frame" x="0.0" y="190" width="568" height="130"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="U34-zh-NQY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Lnf-TB-K0r" secondAttribute="trailing" id="4Vd-vT-0Q9"/>
+                            <constraint firstAttribute="centerX" secondItem="j1x-Ch-545" secondAttribute="centerX" constant="1" id="7dD-eu-Ean"/>
+                            <constraint firstAttribute="centerX" secondItem="dsx-AG-02Q" secondAttribute="centerX" id="8jq-YM-Zgg"/>
+                            <constraint firstItem="dsx-AG-02Q" firstAttribute="top" secondItem="54i-CD-ERr" secondAttribute="bottom" id="9vQ-2p-Ilz"/>
+                            <constraint firstAttribute="bottom" secondItem="Lnf-TB-K0r" secondAttribute="bottom" id="Ehb-sE-HKm"/>
+                            <constraint firstItem="j1x-Ch-545" firstAttribute="top" secondItem="dsx-AG-02Q" secondAttribute="bottom" id="KX5-VQ-PaU"/>
+                            <constraint firstItem="Lnf-TB-K0r" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="u0j-SV-odV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XNM-oB-H77">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="Oo2-a1-Qxe">
+                            <connections>
+                                <action selector="dismissViewController:" destination="2" id="Xwi-nx-mj1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="keyBoardView" destination="Lnf-TB-K0r" id="cfA-xc-Zlo"/>
+                        <outlet property="transportView" destination="j1x-Ch-545" id="kzc-nm-5HC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="585" y="18"/>
+        </scene>
+        <!--Inter App Audio Sampler-->
+        <scene sceneID="qbE-4w-KQr">
+            <objects>
+                <navigationController id="1uh-2q-FFP" customClass="InterAppAudioSampler" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="i6W-lN-gzg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="Lff-ps-48M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epx-uk-71L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-70" y="18"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

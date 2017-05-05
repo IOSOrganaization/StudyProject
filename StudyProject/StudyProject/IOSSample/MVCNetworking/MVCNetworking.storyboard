@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SaT-vA-UhY">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="gH3-pT-2J6">
+            <objects>
+                <navigationController id="SaT-vA-UhY" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qOM-B9-KkV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5K5-F8-7JJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="eBF-YV-Inq" customClass="MVCNetworking">
+                    <connections>
+                        <outlet property="navController" destination="SaT-vA-UhY" id="oy9-MJ-FOF"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-217" y="160"/>
+        </scene>
+    </scenes>
+</document>

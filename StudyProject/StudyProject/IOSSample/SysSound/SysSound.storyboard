@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7oZ-S8-IMv">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ymU-6o-ZVa">
+            <objects>
+                <navigationController id="7oZ-S8-IMv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Hr-6M-sc0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bgn-Zy-dz6" kind="relationship" relationship="rootViewController" id="gcN-yu-as0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HMf-jT-822" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-402" y="226"/>
+        </scene>
+        <!--SysSound-->
+        <scene sceneID="e4s-lO-nYP">
+            <objects>
+                <viewController id="bgn-Zy-dz6" customClass="SysSoundViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ntb-QM-Fwc"/>
+                        <viewControllerLayoutGuide type="bottom" id="z41-Wb-kbq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ec4-D4-KN6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAV-Xh-fc0">
+                                <rect key="frame" x="26" y="74" width="548" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="System Sound">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playSystemSound:" destination="bgn-Zy-dz6" eventType="touchDown" id="OcK-yh-sRP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVD-2s-kkz">
+                                <rect key="frame" x="26" y="107" width="548" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Alert Sound">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAlertSound:" destination="bgn-Zy-dz6" eventType="touchDown" id="FPx-rh-g1f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1L-O1-Ofw">
+                                <rect key="frame" x="26" y="140" width="548" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Vibration">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="vibrate:" destination="bgn-Zy-dz6" eventType="touchDown" id="Xlg-Bb-PjS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i1L-O1-Ofw" firstAttribute="top" secondItem="CVD-2s-kkz" secondAttribute="bottom" id="3KM-f6-TEV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rAV-Xh-fc0" secondAttribute="trailing" constant="10" id="3Sz-cN-PU5"/>
+                            <constraint firstItem="rAV-Xh-fc0" firstAttribute="leading" secondItem="Ec4-D4-KN6" secondAttribute="leadingMargin" constant="10" id="8t1-CV-YND"/>
+                            <constraint firstItem="CVD-2s-kkz" firstAttribute="leading" secondItem="Ec4-D4-KN6" secondAttribute="leadingMargin" constant="10" id="G0q-Ex-6XO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CVD-2s-kkz" secondAttribute="trailing" constant="10" id="J0S-47-pSm"/>
+                            <constraint firstItem="rAV-Xh-fc0" firstAttribute="top" secondItem="Ntb-QM-Fwc" secondAttribute="bottom" constant="10" id="Kae-nC-pi7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i1L-O1-Ofw" secondAttribute="trailing" constant="10" id="Pjb-Vo-Yid"/>
+                            <constraint firstItem="i1L-O1-Ofw" firstAttribute="leading" secondItem="Ec4-D4-KN6" secondAttribute="leadingMargin" constant="10" id="eeB-Yb-7Kf"/>
+                            <constraint firstItem="CVD-2s-kkz" firstAttribute="top" secondItem="rAV-Xh-fc0" secondAttribute="bottom" id="nwV-H5-gcu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SysSound" id="0jj-EY-xBd">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="opF-pH-DOK">
+                            <connections>
+                                <action selector="dismissViewController:" destination="bgn-Zy-dz6" id="qGz-ud-xHC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XNP-0S-yT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="283" y="226"/>
+        </scene>
+    </scenes>
+</document>

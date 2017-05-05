@@ -1,0 +1,1 @@
+////  FileBaseDirectories.h//  FirstStydyProject////  Created by XiaoTian on 13-7-29.//  Copyright (c) 2013年 XiaoTian. All rights reserved.//#import <Foundation/Foundation.h>// 程序的基本目录[Domain程序集目录]@interface FileBaseDirectories : NSObject-(void) baseMethod;@end

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jyu-YA-Kbo">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="W5C-KK-Dit">
+            <objects>
+                <navigationController id="jyu-YA-Kbo" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="euD-WE-Ma3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Woq-AM-u2K" kind="relationship" relationship="rootViewController" id="keS-Ip-tPY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L91-cD-e1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-199" y="331"/>
+        </scene>
+        <!--PageControl-->
+        <scene sceneID="k8e-Xu-Dmb">
+            <objects>
+                <viewController id="Woq-AM-u2K" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="asO-MY-TTa"/>
+                        <viewControllerLayoutGuide type="bottom" id="bnv-MW-NtM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8gz-Vb-cHV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="PageControl" id="2wj-oH-LDq">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="QzK-r1-lYz">
+                            <connections>
+                                <action selector="dismissViewController:" destination="Woq-AM-u2K" id="5Ov-Za-ibe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contentView" destination="8gz-Vb-cHV" id="HAF-ZM-7nb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jBC-Fy-92m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="ls3-5h-hYB" customClass="PadContentController">
+                    <connections>
+                        <outlet property="detailViewController" destination="Woq-AM-u2K" id="AkZ-oP-fDy"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="488" y="331"/>
+        </scene>
+    </scenes>
+</document>

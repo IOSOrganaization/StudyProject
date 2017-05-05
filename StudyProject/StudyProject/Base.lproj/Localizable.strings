@@ -1,0 +1,229 @@
+/* 
+  Localizable.strings
+  StudyProject
+
+  说明:Strings used across the application via the NSLocalizedString API.
+  Created by XiaoTian on 12/26/14.
+  Copyright (c) 2014 XiaoTian. All rights reserved.
+ */
+
+/* 多语言支持资源文件 */
+"OK" = "OK";
+"Cancel" = "Cancel";
+"titleNavigator" = "StudyProject Navigator";
+"appName" = "StudyProject(Base)";
+/* 包含注释的资源 */
+/* this is name field comment */
+"name" = "Name";
+
+// IOS 官方列子语言资源
+"LOCATION_SERVICE" = "Location";
+"CALENDARS_SERVICE" = "Calendars";
+"CONTACTS_SERVICE" = "Contacts";
+"PHOTOS_SERVICE" = "Photos";
+"REMINDERS_SERVICE" = "Reminders";
+"MICROPHONE_SERVICE" = "Microphone";
+"MOTION_SERVICE" = "Motion";
+"BLUETOOTH_SERVICE" = "Bluetooth";
+"FACEBOOK_SERVICE" = "Facebook";
+"TWITTER_SERVICE" = "Twitter";
+"SINA_WEIBO_SERVICE" = "Sina Weibo";
+"TENCENT_WEIBO_SERVICE" = "Tencent Weibo";
+"ADVERTISING_SERVICE" = "Advertising";
+"CHECK_ACCESS" = "Check Access";
+"REQUEST_ACCESS" = "Request Access";
+"GRANTED" = "granted";
+"DENIED" = "denied";
+"UNKNOWN" = "unknown";
+"UNAVAILABLE" = "unavailable";
+"UNDETERMINED" = "undetermined";
+"RESTRICTED" = "restricted";
+"ALLOWED" = "allowed";
+"OK" = "OK";
+"ACCESS_LEVEL" = "Access to %@ is %@.";
+"REQUEST_STATUS" = "Request Status";
+/* Accuracy Levels */
+"AccuracyBest" = "Best";
+"Accuracy10" = "10 meters";
+"Accuracy100" = "100 meters";
+"Accuracy1000" = "1 kilometer";
+"Accuracy3000" = "3 kilometers";
+
+/* Location Status */
+"Updating" = "Updating";
+"Tracking" = "Tracking";
+"Timed Out" = "Timed Out";
+"Error" = "Error";
+
+/* Section Labels */
+"Status" = "Status";
+"Best Measurement" = "Best Measurement";
+"All Measurements" = "All Measurements";
+"Attributes" = "Attributes";
+"Accuracy" = "Accuracy";
+"Course and Speed" = "Course and Speed";
+
+/* Location Value Labels */
+"timestamp" = "timestamp";
+"coordinate" = "coordinate";
+"altitude" = "altitude";
+"horizontal" = "horizontal";
+"vertical" = "vertical";
+"course" = "course";
+"speed" = "speed";
+
+/* Reset button labels */
+"Reset" = "Reset";
+
+/* Data unavailable messages */
+"DataUnavailable" = "Unavailable";
+
+/* Formatting strings for location data output */
+"LatLongFormat" = "%.4f° %@, %.4f° %@";
+"AltitudeFormat" = "%.2f meters %@";
+"AccuracyFormat" = "%.2f meters";
+"CourseFormat" = "%.4f° Clockwise from North";
+"SpeedFormat" = "%.2f meters per second";
+
+/* Directions */
+"North" = "N";
+"South" = "S";
+"East" = "E";
+"West" = "W";
+"AboveSeaLevel" = "above sea level";
+"BelowSeaLevel" = "below sea level";
+
+/* Error messages */
+"NoLocationServices" = "Location services are not enabled.";
+"LocationDenied" = "Access to use your location was denied.";
+"LocationUnknown" = "Your location could not be determined.";
+"GenericLocationError" = "Unknown location error code:";
+
+/* Titles */
+"LocationInfo" = "Location Info";
+
+/* Alert */
+"DisabledTitle" = "Location Services is Disabled";
+"DisabledMessage" = "You currently have all location services for this device disabled. If you proceed, you will be asked to confirm whether location services should be reenabled.";
+"OKButtonTitle" = "OK";
+
+"SELECT_TEST" = "Select test";
+"TOUCH_ID_IS_AVAILABLE" = "Touch ID is available";
+"TOUCH_ID_IS_NOT_AVAILABLE" = "Touch ID is not available";
+"UNLOCK_ACCESS_TO_LOCKED_FATURE" = "Unlock access to locked feature";
+"EVALUATE_POLICY_SUCCESS" = "EvaluatePolicy: succes";
+"EVALUATE_POLICY_WITH_ERROR" = "EvaluatePolicy: failed \nwith error: %@";
+"TOUCH_ID_PREFLIGHT" = "Touch ID preflight";
+"TOUCH_ID" = "Touch ID authentication";
+"TOUCH_ID_CUSTOM" = "Touch ID authentication (custom)";
+"SAMPLE_SERVICES_TEXT" = "SampleService";
+"TOUCH_ID_KEYCHAIN" = "TouchID Keychain";
+"SEC_ITEM_ADD_CAN_CREATE_OBJECT" = "SecItemAdd can't create sacObject: %@";
+"SEC_ITEM_ADD_STATUS" = "SecItemAdd status: %@";
+"SEC_ITEM_DELETE_STATUS" = "SecItemDelete status: %@";
+"SEC_ITEM_COPY_MATCHING_STATUS" = "SecItemCopyMatching status: %@";
+"RESULT" = "Result: %@\n";
+"SEC_ITEM_UPDATE_STATUS" = "SecItemUpdate status: %@";
+"SUCCESS" = "success\n";
+"ERROR_ITEM_ALREADY_EXISTS" = "error item already exists";
+"ERROR_ITEM_NOT_FOUND" = "error item not found";
+"ERROR_ITEM_AUTHENTICATION_FAILED" = "error item authentication failed";
+"ADD_ITEM" = "Add Item";
+"QUERY_FOR_ITEM" = "Query for Item";
+"DELETE_ITEM" = "Delete Item";
+"UPDATE_ITEM" = "Update Item";
+"AUTHENTICATE_TO_ACCESS_SERVICE_PASSWORD" = "Authenticate to access service password";
+"YES" = "Yes";
+"NO" = "No";
+"TOUCH_ID_FALLBACK" = "Enter PIN";
+/* A sentence with the mountain's name (first parameter), height (second parameter), and climbed date (third parameter) */
+
+"sentenceFormat" = "%1$@ was first climbed on %3$@ and has a height of %2$@";
+
+/* A sentence with the mountain's name (first parameter), and height (second parameter), but no climbed date */
+
+"undatedSentenceFormat" = "%1$@ has a height of %2$@";
+
+/* Use to express a height in meters */
+
+"meterFormat" = "%@ meters";
+
+/* Use to express a height in feet */
+
+"footFormat" = "%@ feet";
+
+/* Title used for the Navigation Controller for the root view */
+
+"rootViewNavTitle" = "Mountains";
+
+/* Title used for the Navigation Controller for the detail view */
+
+"detailViewNavTitle" = "Mountain Detail";
+/* Age of the user */
+"Age" = "Age";
+
+/* The user's elevator pitch for finding a partner */
+"Elevator Pitch" = "Elevator Pitch";
+
+/* Logo description */
+"Hello goodbye, meet your match" = "Hello goodbye, meet your match";
+
+/* Title of the start page */
+"HelloGoodbye" = "HelloGoodbye";
+
+/* The user's hobbies */
+"Hobbies" = "Hobbies";
+
+/* Title of the matches page */
+"Matches" = "Matches";
+
+/* Name of the card preview tab */
+"Preview" = "Preview";
+
+/* Title of the profile page */
+"Profile" = "Profile";
+
+/* Accessibility label for profile photo */
+"Profile photo" = "Profile photo";
+
+/* Accessibility action to say goodbye */
+"Say goodbye" = "Say goodbye";
+
+/* Accessibility action to say hello */
+"Say hello" = "Say hello";
+
+/* Shown when all matches have been viewed */
+"Stay tuned for more matches!" = "Stay tuned for more matches!";
+
+/* Accessibility instructions for the Matches page */
+"Swipe up to say \"Hello!\"\nSwipe down to say \"Goodbye\"" = "Swipe up to say \"Hello!\"\nSwipe down to say \"Goodbye\"";
+
+/* Instructions for the Matches page */
+"Swipe ↑ to say \"Hello!\"\nSwipe ↓ to say \"Goodbye...\"" = "Swipe ↑ to say \"Hello!\"\nSwipe ↓ to say \"Goodbye...\"";
+
+/* Placeholder for profile text fields */
+"Type here..." = "Type here...";
+
+/* The user's age */
+"Your age" = "Your age";
+
+"Username" = "Username";
+"Password" = "Password";
+"Account Number" = "Account Number";
+"Show Cleartext" = "Show Cleartext";
+"AccountNumberShared" = "The account number is shared between all apps from this developer.";
+
+/*
+ Localizable.strings for CustomContentAccessibility
+ */
+
+
+/* Detail text for Guided Access Restriction (ControlsRestriction)*/
+"detailTextForControlsRestriction" = "Adjust floor and show coffee";
+
+/* Text for Guided Access Restriction (ControlsRestriction)*/
+"textForControlsRestriction" = "Controls";
+
+"title" = "Book Title";
+"author" = "Author";
+"copyright" = "Copyright Date";

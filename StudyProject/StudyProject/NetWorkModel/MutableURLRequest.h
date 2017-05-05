@@ -1,0 +1,1 @@
+////  MutableURLRequest.h//  FirstStydyProject////  Created by XiaoTian on 13-8-8.//  Copyright (c) 2013年 XiaoTian. All rights reserved.//#import <Foundation/Foundation.h>// 网络请求@interface MutableURLRequest : NSObject<NSURLConnectionDelegate,NSURLConnectionDataDelegate>{ // URLConnection 委托协议    __strong  NSMutableData *receivedData;}-(void) baseMethod;@end

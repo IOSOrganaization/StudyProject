@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9527.1" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sRy-J2-RRo">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9525.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="XI6-hB-MVx">
+            <objects>
+                <navigationController id="sRy-J2-RRo" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FPh-mF-fQ5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VIo-df-nzX" kind="relationship" relationship="rootViewController" id="EAF-de-fL5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SEy-ox-Cag" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="297"/>
+        </scene>
+        <!--ADGame-->
+        <scene sceneID="avq-b8-bFM">
+            <objects>
+                <viewController id="VIo-df-nzX" customClass="ADGameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="brn-il-sSL"/>
+                        <viewControllerLayoutGuide type="bottom" id="fic-bR-i7Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tbA-CZ-K0E">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKa-1n-VAz">
+                                <rect key="frame" x="285" y="84" width="30" height="68"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="48"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" red="1" green="0.04260051994230063" blue="0.12348079521676925" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scorePlayer1" destination="VIo-df-nzX" eventType="touchUpInside" id="oPS-Hh-HxM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7H-ZF-RsF">
+                                <rect key="frame" x="36" y="266" width="30" height="68"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="48"/>
+                                <state key="normal" title="2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scorePlayer2" destination="VIo-df-nzX" eventType="touchUpInside" id="F4w-Yp-t4x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifu-ol-mQm">
+                                <rect key="frame" x="285" y="512" width="30" height="68"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="48"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" red="0.01015216551599063" green="1" blue="0.043807035650419657" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scorePlayer3" destination="VIo-df-nzX" eventType="touchUpInside" id="3CE-1h-bTM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3f-Jw-5EK">
+                                <rect key="frame" x="550" y="266" width="30" height="68"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="48"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" red="1" green="0.5923091142898258" blue="0.13942271833461695" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scorePlayer4" destination="VIo-df-nzX" eventType="touchUpInside" id="VpO-7M-Kpk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Thumb Wars!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaE-yV-KUD">
+                                <rect key="frame" x="195" y="278" width="209" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RDM-4i-8dU" customClass="ADGameScoreView">
+                                <rect key="frame" x="86" y="152" width="444" height="360"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="U3f-Jw-5EK" secondAttribute="trailing" constant="20" id="6bp-xH-UTf"/>
+                            <constraint firstAttribute="centerY" secondItem="U3f-Jw-5EK" secondAttribute="centerY" id="Anc-Jp-rPa"/>
+                            <constraint firstItem="RDM-4i-8dU" firstAttribute="top" secondItem="vKa-1n-VAz" secondAttribute="bottom" id="Kxg-QV-3Ef"/>
+                            <constraint firstAttribute="centerY" secondItem="SaE-yV-KUD" secondAttribute="centerY" id="LAV-Ay-9i3"/>
+                            <constraint firstItem="RDM-4i-8dU" firstAttribute="leading" secondItem="Q7H-ZF-RsF" secondAttribute="trailing" constant="20" id="MkK-iE-qhu"/>
+                            <constraint firstItem="U3f-Jw-5EK" firstAttribute="leading" secondItem="RDM-4i-8dU" secondAttribute="trailing" constant="20" id="SDC-7R-ft4"/>
+                            <constraint firstItem="Q7H-ZF-RsF" firstAttribute="leading" secondItem="tbA-CZ-K0E" secondAttribute="leadingMargin" constant="20" id="YhL-hF-3je"/>
+                            <constraint firstAttribute="centerY" secondItem="Q7H-ZF-RsF" secondAttribute="centerY" id="kIR-kh-oid"/>
+                            <constraint firstAttribute="centerX" secondItem="SaE-yV-KUD" secondAttribute="centerX" id="p1B-kx-8kz"/>
+                            <constraint firstAttribute="centerX" secondItem="ifu-ol-mQm" secondAttribute="centerX" id="pPG-wj-Ttg"/>
+                            <constraint firstItem="ifu-ol-mQm" firstAttribute="top" secondItem="RDM-4i-8dU" secondAttribute="bottom" id="rHS-VY-BFd"/>
+                            <constraint firstAttribute="centerX" secondItem="vKa-1n-VAz" secondAttribute="centerX" id="tOj-pH-M6v"/>
+                            <constraint firstItem="vKa-1n-VAz" firstAttribute="top" secondItem="brn-il-sSL" secondAttribute="bottom" constant="20" id="trF-tk-hdd"/>
+                            <constraint firstItem="fic-bR-i7Y" firstAttribute="top" secondItem="ifu-ol-mQm" secondAttribute="bottom" constant="20" id="udo-p6-lta"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ADGame" id="VTu-Zp-nwV">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="wDq-2E-V1R">
+                            <connections>
+                                <action selector="dismissViewController:" destination="VIo-df-nzX" id="WC0-Es-NPk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="player1" destination="vKa-1n-VAz" id="9Lk-n4-rUZ"/>
+                        <outlet property="player2" destination="Q7H-ZF-RsF" id="Afo-dg-hfW"/>
+                        <outlet property="player3" destination="ifu-ol-mQm" id="9Zz-cA-iqI"/>
+                        <outlet property="player4" destination="U3f-Jw-5EK" id="wib-AH-EzU"/>
+                        <outlet property="scoreView" destination="RDM-4i-8dU" id="egb-gF-HDe"/>
+                        <outlet property="titleLabel" destination="SaE-yV-KUD" id="zWh-9d-N8D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RFL-if-s6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="405" y="297"/>
+        </scene>
+    </scenes>
+</document>

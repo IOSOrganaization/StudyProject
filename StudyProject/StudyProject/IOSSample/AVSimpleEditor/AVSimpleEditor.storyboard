@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9527.1" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vj8-Kg-sAi">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9525.1"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="JOI-65-2jC">
+            <objects>
+                <navigationController id="vj8-Kg-sAi" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nci-aj-d3I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ut7-WQ-gQz" kind="relationship" relationship="rootViewController" id="Hg8-P7-hQR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dB6-RS-7y2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="327"/>
+        </scene>
+        <!--AVSimpleEditor-->
+        <scene sceneID="mFR-RB-c2Q">
+            <objects>
+                <viewController id="Ut7-WQ-gQz" customClass="AVSEViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mql-dx-Ocj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lkz-gd-TEM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GlE-oP-ikh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGh-qz-Dwz">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="play" id="joP-kb-U5u">
+                                        <connections>
+                                            <action selector="playPauseToggle:" destination="Ut7-WQ-gQz" id="gut-pE-eyZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="c0U-8x-OnY"/>
+                                    <barButtonItem title="Trim" id="qHw-6S-83X">
+                                        <connections>
+                                            <action selector="edit:" destination="Ut7-WQ-gQz" id="gn6-FS-nvL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem tag="1" title="Rotate" id="p7f-FO-KaJ">
+                                        <connections>
+                                            <action selector="edit:" destination="Ut7-WQ-gQz" id="N50-o3-yR3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem tag="2" title="Crop" id="dOy-zR-NWL">
+                                        <connections>
+                                            <action selector="edit:" destination="Ut7-WQ-gQz" id="rbP-Rc-Bbs"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem tag="3" title="Add Music" id="39G-fN-vOD">
+                                        <connections>
+                                            <action selector="edit:" destination="Ut7-WQ-gQz" id="JRg-bT-O1C"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem tag="4" title="Add Watermark" id="kpy-gj-bVO">
+                                        <connections>
+                                            <action selector="edit:" destination="Ut7-WQ-gQz" id="yO7-Be-y4H"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8qC-Vs-LYQ"/>
+                                    <barButtonItem title="Export" id="egA-wv-PMI">
+                                        <connections>
+                                            <action selector="exportToMovie:" destination="Ut7-WQ-gQz" id="yof-wU-3bx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MvU-oo-DZr">
+                                <rect key="frame" x="20" y="84" width="560" height="432"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Jxr-0p-o2A">
+                                        <rect key="frame" x="270" y="206" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Video" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4e-hu-waw">
+                                        <rect key="frame" x="439" y="361" width="70.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Unplayable Asset" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHk-wX-qAb">
+                                        <rect key="frame" x="376" y="321" width="134" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protected Video" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKe-23-Tft">
+                                        <rect key="frame" x="387" y="280.5" width="123" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wHk-wX-qAb" secondAttribute="trailing" constant="50" id="4gN-sM-g4W"/>
+                                    <constraint firstItem="wHk-wX-qAb" firstAttribute="top" secondItem="fKe-23-Tft" secondAttribute="bottom" constant="10" id="6TP-B4-ri0"/>
+                                    <constraint firstItem="wHk-wX-qAb" firstAttribute="top" secondItem="fKe-23-Tft" secondAttribute="bottom" constant="20" id="Kjb-sh-2C5"/>
+                                    <constraint firstItem="E4e-hu-waw" firstAttribute="top" secondItem="wHk-wX-qAb" secondAttribute="bottom" constant="20" id="Uhu-Cr-BCp"/>
+                                    <constraint firstAttribute="trailing" secondItem="E4e-hu-waw" secondAttribute="trailing" constant="50" id="aGj-eq-fzt"/>
+                                    <constraint firstAttribute="trailing" secondItem="fKe-23-Tft" secondAttribute="trailing" constant="50" id="dpF-Qt-vaO"/>
+                                    <constraint firstAttribute="bottom" secondItem="E4e-hu-waw" secondAttribute="bottom" constant="50" id="ho5-lv-sCU"/>
+                                    <constraint firstAttribute="centerY" secondItem="Jxr-0p-o2A" secondAttribute="centerY" id="m2N-vy-WlA"/>
+                                    <constraint firstAttribute="centerX" secondItem="Jxr-0p-o2A" secondAttribute="centerX" id="sMw-1j-1iW"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6TP-B4-ri0"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zNq-Ju-gzh">
+                                <rect key="frame" x="20" y="526" width="560" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OGh-qz-Dwz" secondAttribute="trailing" id="1SA-dG-D0L"/>
+                            <constraint firstItem="MvU-oo-DZr" firstAttribute="top" secondItem="Mql-dx-Ocj" secondAttribute="bottom" constant="20" id="3XM-GT-0xE"/>
+                            <constraint firstItem="zNq-Ju-gzh" firstAttribute="top" secondItem="MvU-oo-DZr" secondAttribute="bottom" constant="10" id="6f1-Dj-lEt"/>
+                            <constraint firstAttribute="trailing" secondItem="MvU-oo-DZr" secondAttribute="trailing" constant="20" id="9mz-hn-nLQ"/>
+                            <constraint firstAttribute="trailing" secondItem="zNq-Ju-gzh" secondAttribute="trailing" constant="20" id="VXU-yP-D9q"/>
+                            <constraint firstItem="OGh-qz-Dwz" firstAttribute="top" secondItem="MvU-oo-DZr" secondAttribute="bottom" constant="40" id="amm-vg-acT"/>
+                            <constraint firstItem="Lkz-gd-TEM" firstAttribute="top" secondItem="OGh-qz-Dwz" secondAttribute="bottom" id="fhw-vE-8rC"/>
+                            <constraint firstItem="zNq-Ju-gzh" firstAttribute="leading" secondItem="GlE-oP-ikh" secondAttribute="leading" constant="20" id="fql-Ry-qI4"/>
+                            <constraint firstItem="OGh-qz-Dwz" firstAttribute="leading" secondItem="GlE-oP-ikh" secondAttribute="leading" id="pmu-dx-bir"/>
+                            <constraint firstItem="MvU-oo-DZr" firstAttribute="leading" secondItem="GlE-oP-ikh" secondAttribute="leading" constant="20" id="xSj-70-Pg8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="AVSimpleEditor" id="uLE-Ie-ERX">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="WBt-6K-z0K">
+                            <connections>
+                                <action selector="dismissViewController:" destination="Ut7-WQ-gQz" id="X9A-I9-0yV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="exportButton" destination="egA-wv-PMI" id="PJT-Af-Rdx"/>
+                        <outlet property="exportProgressView" destination="zNq-Ju-gzh" id="swp-K5-acq"/>
+                        <outlet property="loadingSpinner" destination="Jxr-0p-o2A" id="jF4-tD-wXa"/>
+                        <outlet property="noVideoLabel" destination="E4e-hu-waw" id="CGf-de-ocA"/>
+                        <outlet property="playPauseButton" destination="joP-kb-U5u" id="SJb-98-6fn"/>
+                        <outlet property="playerView" destination="MvU-oo-DZr" id="jIO-ly-Ak5"/>
+                        <outlet property="protectedVideoLabel" destination="fKe-23-Tft" id="y5h-lK-Ey7"/>
+                        <outlet property="unplayableLabel" destination="wHk-wX-qAb" id="Mh5-1X-6KN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6aP-4e-lwh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852" y="327"/>
+        </scene>
+    </scenes>
+</document>

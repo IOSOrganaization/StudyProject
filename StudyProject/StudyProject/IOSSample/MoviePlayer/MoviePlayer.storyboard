@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7BQ-Ts-hDO">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="9EQ-d5-Pmb">
+            <objects>
+                <navigationController id="7BQ-Ts-hDO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xwk-I3-GGx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nb3-vj-Gl3" kind="relationship" relationship="rootViewController" id="Akb-RF-pbl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NrW-Sz-Kr0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="281" y="227"/>
+        </scene>
+        <!--MoviePlayer-->
+        <scene sceneID="G1p-0l-mRU">
+            <objects>
+                <viewController id="nb3-vj-Gl3" customClass="MoviePlayerViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="MoviePlayer" id="Lu4-68-rWT">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="kHn-rk-5q3">
+                            <connections>
+                                <action selector="dismissViewController:" destination="nb3-vj-Gl3" id="RxN-Ma-KZP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S5f-vu-NKo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947" y="227"/>
+        </scene>
+    </scenes>
+</document>

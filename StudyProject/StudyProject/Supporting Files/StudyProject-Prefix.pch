@@ -1,0 +1,31 @@
+//
+//  StudyProject-Prefix.pch
+//  StudyProject
+//  预编译引入头,会自动添加到所有的源类文件中,必须在build target中设置预编译头[静态引入]
+//  Created by XiaoTian on 12/26/14.
+//  Copyright (c) 2014 XiaoTian. All rights reserved.
+//
+
+#ifndef __IPHONE_7_0
+#warning "This project uses features only available in iOS SDK 8.0 and later."
+#endif
+
+#ifndef StudyProject_StudyProject_Prefix_pch
+#define StudyProject_StudyProject_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#endif
+
+#import <Availability.h>
+
+// 引入预编译头
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h> /*用户UI库*/
+    #import <Foundation/Foundation.h> /*基础库*/
+    #import <CoreData/CoreData.h> /*数据库*/
+    #import "UIColor+AAPLApplicationSpecific.h"
+    #import <XiaoTianFramework/XiaoTianFramework.h>/*为所有类添加控制台输出*/
+#endif
+
+#define kBufferDurationSeconds .5

@@ -1,0 +1,1 @@
+////  FileWalker.h//  FirstStydyProject////  Created by XiaoTian on 13-7-19.//  Copyright (c) 2013年 XiaoTian. All rights reserved.//#import <UIKit/UIKit.h>#import <Foundation/Foundation.h>@interface FileWalker : NSObject-(void) enumeratorFiles;@end

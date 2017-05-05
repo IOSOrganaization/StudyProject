@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UPQ-qF-XzA">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--SimpleFTP Sample-->
+        <scene sceneID="DJg-ZX-ukS">
+            <objects>
+                <navigationController id="UPQ-qF-XzA" customClass="SimpleFTPSample" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SEF-rG-eD3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XHU-1D-nc3" kind="relationship" relationship="rootViewController" id="z7a-sA-yfo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nee-db-y23" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-329" y="207"/>
+        </scene>
+        <!--Get-->
+        <scene sceneID="12a-Xw-IgY">
+            <objects>
+                <viewController id="rQt-21-2KM" customClass="SimpleFTPSampleGetController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8VY-PA-aYC"/>
+                        <viewControllerLayoutGuide type="bottom" id="cMY-YD-fts"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NzN-29-6YU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nXu-cZ-08g">
+                                <rect key="frame" x="16" y="64" width="568" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="6Xn-9s-zbU">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="file URL" minimumFontSize="17" id="K9F-Vv-CMU">
+                                            <rect key="frame" x="16" y="7" width="230" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="rQt-21-2KM" id="mMt-4U-j1J"/>
+                                            </connections>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qUS-gC-FnN"/>
+                                    <barButtonItem title="Get" id="Dg5-yS-R8k">
+                                        <connections>
+                                            <action selector="getOrCancelAction:" destination="rQt-21-2KM" id="Wjx-Yh-QYw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="NoImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jk6-Lo-gzO">
+                                <rect key="frame" x="240" y="254" width="120" height="90"/>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Kac-tk-2nL">
+                                <rect key="frame" x="289" y="289" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="get status label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9T-D6-ldU">
+                                <rect key="frame" x="16" y="108" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Jk6-Lo-gzO" secondAttribute="centerY" constant="1" id="8EV-Ji-Jdj"/>
+                            <constraint firstAttribute="centerX" secondItem="Kac-tk-2nL" secondAttribute="centerX" constant="1" id="AkR-bX-idG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nXu-cZ-08g" secondAttribute="trailing" id="AoM-zW-Ibg"/>
+                            <constraint firstItem="B9T-D6-ldU" firstAttribute="trailing" secondItem="NzN-29-6YU" secondAttribute="trailingMargin" id="CEK-fW-Guq"/>
+                            <constraint firstItem="nXu-cZ-08g" firstAttribute="top" secondItem="8VY-PA-aYC" secondAttribute="bottom" id="CW0-TE-s7K"/>
+                            <constraint firstItem="B9T-D6-ldU" firstAttribute="leading" secondItem="NzN-29-6YU" secondAttribute="leadingMargin" id="Edp-DI-dgh"/>
+                            <constraint firstItem="B9T-D6-ldU" firstAttribute="top" secondItem="nXu-cZ-08g" secondAttribute="bottom" id="Zz3-Ma-HTX"/>
+                            <constraint firstAttribute="centerY" secondItem="Kac-tk-2nL" secondAttribute="centerY" constant="1" id="bv2-6N-AzK"/>
+                            <constraint firstItem="nXu-cZ-08g" firstAttribute="leading" secondItem="NzN-29-6YU" secondAttribute="leadingMargin" id="hJH-np-Lvo"/>
+                            <constraint firstAttribute="centerX" secondItem="Jk6-Lo-gzO" secondAttribute="centerX" constant="1" id="lLh-H5-HE3"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Get" image="get.png" id="jCb-MO-Awo"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Kac-tk-2nL" id="Xoq-9t-07Z"/>
+                        <outlet property="getOrCancelButton" destination="Dg5-yS-R8k" id="6Bw-xa-bGo"/>
+                        <outlet property="imageView" destination="Jk6-Lo-gzO" id="lg3-qa-iIe"/>
+                        <outlet property="statusLabel" destination="B9T-D6-ldU" id="ZEa-Bz-TOy"/>
+                        <outlet property="urlText" destination="K9F-Vv-CMU" id="bnX-hc-vUn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jne-0P-n1X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-419" y="959"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="O0q-mK-744">
+            <objects>
+                <viewController id="RLV-0V-Brk" customClass="SimpleFTPSampleListController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qib-Hd-J4j"/>
+                        <viewControllerLayoutGuide type="bottom" id="K47-ju-FsF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B5E-oj-NJI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="UBc-Ng-IU9">
+                                <rect key="frame" x="16" y="108" width="568" height="443"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RLV-0V-Brk" id="0Wg-06-g3l"/>
+                                    <outlet property="delegate" destination="RLV-0V-Brk" id="yZW-FT-vUt"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ivW-Q9-xyu">
+                                <rect key="frame" x="16" y="290" width="568" height="20"/>
+                            </activityIndicatorView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q2v-h2-8ky">
+                                <rect key="frame" x="16" y="64" width="568" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="XpV-sT-phg">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="lKq-Cq-xKv">
+                                            <rect key="frame" x="16" y="7" width="230" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="RLV-0V-Brk" id="bif-xE-Lkd"/>
+                                            </connections>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="LeJ-yW-FpH"/>
+                                    <barButtonItem title="Get" id="IXc-yg-gOb">
+                                        <connections>
+                                            <action selector="listOrCancelAction:" destination="RLV-0V-Brk" id="E0a-f9-uXq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="ivW-Q9-xyu" secondAttribute="centerY" constant="1" id="5AB-Gr-wMX"/>
+                            <constraint firstItem="K47-ju-FsF" firstAttribute="top" secondItem="UBc-Ng-IU9" secondAttribute="bottom" id="5fa-JF-J06"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UBc-Ng-IU9" secondAttribute="trailing" id="9sD-Xt-Lwk"/>
+                            <constraint firstItem="UBc-Ng-IU9" firstAttribute="leading" secondItem="B5E-oj-NJI" secondAttribute="leadingMargin" id="DNd-KQ-mZF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q2v-h2-8ky" secondAttribute="trailing" id="OpL-jL-nYV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UBc-Ng-IU9" secondAttribute="trailing" id="X7u-H7-Duu"/>
+                            <constraint firstItem="Q2v-h2-8ky" firstAttribute="leading" secondItem="B5E-oj-NJI" secondAttribute="leadingMargin" id="bEW-NR-005"/>
+                            <constraint firstAttribute="centerX" secondItem="ivW-Q9-xyu" secondAttribute="centerX" constant="1" id="d2g-Ru-6oy"/>
+                            <constraint firstItem="UBc-Ng-IU9" firstAttribute="top" secondItem="Q2v-h2-8ky" secondAttribute="bottom" id="hsI-dJ-D6k"/>
+                            <constraint firstItem="UBc-Ng-IU9" firstAttribute="leading" secondItem="B5E-oj-NJI" secondAttribute="leadingMargin" id="of9-li-DXi"/>
+                            <constraint firstItem="Q2v-h2-8ky" firstAttribute="top" secondItem="Qib-Hd-J4j" secondAttribute="bottom" id="vIq-mf-VOw"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="List" image="list.png" id="z3T-Yk-MEY"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="ivW-Q9-xyu" id="zzl-Qw-wb5"/>
+                        <outlet property="listOrCancelButton" destination="IXc-yg-gOb" id="lNx-b4-xkR"/>
+                        <outlet property="tableView" destination="UBc-Ng-IU9" id="HYJ-sj-MbS"/>
+                        <outlet property="urlText" destination="lKq-Cq-xKv" id="3vX-yD-zq7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Css-bR-pSM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="202" y="959"/>
+        </scene>
+        <!--Put-->
+        <scene sceneID="j6r-uq-IW2">
+            <objects>
+                <viewController id="rFP-0y-tTf" customClass="SimpleFTPSamplePutController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0oY-HS-qyL"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Hj-95-7fT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vi1-cj-fxz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BXJ-r7-WiD">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="jdd-YA-Elu">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="directory URL" minimumFontSize="17" id="gaW-Cw-7Xl">
+                                            <rect key="frame" x="16" y="7" width="230" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="rFP-0y-tTf" id="HJv-b1-gyG"/>
+                                            </connections>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9xD-nl-pfD"/>
+                                    <barButtonItem title="Cancel" id="HlS-zR-hbB">
+                                        <connections>
+                                            <action selector="cancelAction:" destination="rFP-0y-tTf" id="NJE-o4-861"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="user name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pjd-ZX-vVT">
+                                <rect key="frame" x="57" y="108" width="230" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rFP-0y-tTf" id="5Aw-4K-7by"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="user password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dDs-GX-gWo">
+                                <rect key="frame" x="319" y="108" width="230" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rFP-0y-tTf" id="wvc-xO-ovu"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="put status label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX7-E2-mp4">
+                                <rect key="frame" x="241" y="146" width="118" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rw7-7w-zvC">
+                                <rect key="frame" x="289" y="289" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLP-PK-iBI">
+                                <rect key="frame" x="167" y="203" width="120" height="90"/>
+                                <state key="normal" image="TestImage1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="rFP-0y-tTf" eventType="touchUpInside" id="3Ky-Nj-kj8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvV-MP-7Ef">
+                                <rect key="frame" x="307" y="203" width="120" height="90"/>
+                                <state key="normal" image="TestImage2.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="rFP-0y-tTf" eventType="touchUpInside" id="INj-ih-Shf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLX-R7-XoL">
+                                <rect key="frame" x="307" y="309" width="120" height="90"/>
+                                <state key="normal" image="TestImage4.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="rFP-0y-tTf" eventType="touchUpInside" id="IjE-rF-sJ8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4J-u6-bre">
+                                <rect key="frame" x="167" y="309" width="120" height="90"/>
+                                <state key="normal" image="TestImage3.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="rFP-0y-tTf" eventType="touchUpInside" id="QIo-Xy-9V6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="rw7-7w-zvC" secondAttribute="centerY" constant="1" id="4VG-uE-RCq"/>
+                            <constraint firstAttribute="centerX" secondItem="rw7-7w-zvC" secondAttribute="centerX" constant="1" id="mgD-L2-dfD"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Put" image="put.png" id="0nw-SH-KaK"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="rw7-7w-zvC" id="xoA-2p-YbL"/>
+                        <outlet property="cancelButton" destination="HlS-zR-hbB" id="BdF-jv-FkC"/>
+                        <outlet property="passwordText" destination="dDs-GX-gWo" id="tOI-bV-TF1"/>
+                        <outlet property="statusLabel" destination="bX7-E2-mp4" id="D0Q-en-H1A"/>
+                        <outlet property="urlText" destination="gaW-Cw-7Xl" id="lRK-Q8-z0w"/>
+                        <outlet property="usernameText" destination="Pjd-ZX-vVT" id="pcy-Mv-Ejx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="35m-nM-H2K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821" y="959"/>
+        </scene>
+        <!--Create Dir-->
+        <scene sceneID="1TC-26-qNz">
+            <objects>
+                <viewController id="QdE-Bz-bOv" customClass="CreateDirController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QJm-mA-FFe"/>
+                        <viewControllerLayoutGuide type="bottom" id="MxN-Fy-yeq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Ia-cT-DME">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gq7-MI-j0W">
+                                <rect key="frame" x="289" y="289" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w65-st-Gbd">
+                                <rect key="frame" x="16" y="64" width="568" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="lC2-Pk-W0i">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="directory url" minimumFontSize="17" id="EZY-K1-9Ke">
+                                            <rect key="frame" x="16" y="7" width="230" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="QdE-Bz-bOv" id="Qon-32-r3i"/>
+                                            </connections>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xD5-St-5g8"/>
+                                    <barButtonItem title="Create" id="WQE-28-SdG">
+                                        <connections>
+                                            <action selector="createOrCancelAction:" destination="QdE-Bz-bOv" id="3oK-7l-HGs"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="user name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RUD-bL-sVZ">
+                                <rect key="frame" x="16" y="108" width="230" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QdE-Bz-bOv" id="aN2-aG-fTg"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="new directory name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5BI-Ug-9HG">
+                                <rect key="frame" x="185" y="146" width="230" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QdE-Bz-bOv" id="nmM-9R-2Vs"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="create dir status label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsp-nk-nRE">
+                                <rect key="frame" x="218" y="184" width="165" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="user password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Gl-eT-e0P">
+                                <rect key="frame" x="354" y="108" width="230" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QdE-Bz-bOv" id="O8d-la-Edp"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="gq7-MI-j0W" secondAttribute="centerY" constant="1" id="7ht-M7-VUo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w65-st-Gbd" secondAttribute="trailing" id="ZEK-oU-Epz"/>
+                            <constraint firstAttribute="centerX" secondItem="gq7-MI-j0W" secondAttribute="centerX" constant="1" id="gcr-Fh-3K9"/>
+                            <constraint firstItem="w65-st-Gbd" firstAttribute="top" secondItem="QJm-mA-FFe" secondAttribute="bottom" id="hyt-gN-ma4"/>
+                            <constraint firstItem="w65-st-Gbd" firstAttribute="leading" secondItem="4Ia-cT-DME" secondAttribute="leadingMargin" id="isE-FI-9u2"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Create Dir" image="mkdir.png" id="tAH-Wx-NAB"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="gq7-MI-j0W" id="vXY-uN-Emi"/>
+                        <outlet property="createOrCancelButton" destination="WQE-28-SdG" id="Sfh-Fp-6rY"/>
+                        <outlet property="dirNameText" destination="5BI-Ug-9HG" id="2M7-dB-mEz"/>
+                        <outlet property="passwordText" destination="3Gl-eT-e0P" id="gKr-7S-X3l"/>
+                        <outlet property="statusLabel" destination="fsp-nk-nRE" id="xNZ-NJ-AWC"/>
+                        <outlet property="urlText" destination="EZY-K1-9Ke" id="Qgp-OT-Ulc"/>
+                        <outlet property="usernameText" destination="RUD-bL-sVZ" id="ozc-oy-XXO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IXb-hc-T5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1445" y="959"/>
+        </scene>
+        <!--URL Get-->
+        <scene sceneID="L2N-KA-eSS">
+            <objects>
+                <viewController id="eMv-KE-Zit" customClass="SimpleFTPSampleURLGetController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ELi-6r-zdX"/>
+                        <viewControllerLayoutGuide type="bottom" id="BVI-3J-qhw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="in7-7m-LEq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9t-YW-2mn">
+                                <rect key="frame" x="16" y="64" width="568" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="WEK-Rl-Fnd">
+                                        <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="file URL" minimumFontSize="17" id="00z-MY-7xa">
+                                            <rect key="frame" x="16" y="7" width="230" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="eMv-KE-Zit" id="mEF-qN-X12"/>
+                                            </connections>
+                                        </textField>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vyG-rR-cI1"/>
+                                    <barButtonItem title="Get" id="Mss-Xz-EZm">
+                                        <connections>
+                                            <action selector="getOrCancelAction:" destination="eMv-KE-Zit" id="6Tl-HV-DlG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="1SX-ee-zDf">
+                                <rect key="frame" x="239" y="254" width="120" height="90"/>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kcb-4a-cZC">
+                                <rect key="frame" x="289" y="289" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="get status label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4v-YE-Woq">
+                                <rect key="frame" x="16" y="108" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="C9t-YW-2mn" secondAttribute="trailing" id="66Q-b6-kPa"/>
+                            <constraint firstItem="r4v-YE-Woq" firstAttribute="leading" secondItem="in7-7m-LEq" secondAttribute="leadingMargin" id="7Fx-22-jB6"/>
+                            <constraint firstItem="C9t-YW-2mn" firstAttribute="leading" secondItem="in7-7m-LEq" secondAttribute="leadingMargin" id="FdU-tN-w7V"/>
+                            <constraint firstItem="r4v-YE-Woq" firstAttribute="top" secondItem="C9t-YW-2mn" secondAttribute="bottom" id="LNN-mn-zNf"/>
+                            <constraint firstAttribute="centerX" secondItem="kcb-4a-cZC" secondAttribute="centerX" constant="1" id="cf6-NA-wJ9"/>
+                            <constraint firstAttribute="centerY" secondItem="kcb-4a-cZC" secondAttribute="centerY" constant="1" id="h89-Fg-SEe"/>
+                            <constraint firstAttribute="centerY" secondItem="1SX-ee-zDf" secondAttribute="centerY" constant="1" id="new-Ep-tNv"/>
+                            <constraint firstItem="C9t-YW-2mn" firstAttribute="top" secondItem="ELi-6r-zdX" secondAttribute="bottom" id="td3-jG-Dm9"/>
+                            <constraint firstItem="r4v-YE-Woq" firstAttribute="trailing" secondItem="in7-7m-LEq" secondAttribute="trailingMargin" id="ttR-yz-GfX"/>
+                            <constraint firstAttribute="centerX" secondItem="1SX-ee-zDf" secondAttribute="centerX" constant="1" id="v0c-X6-gSo"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="URL Get" image="get.png" id="RSL-bN-cKo"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="kcb-4a-cZC" id="7GI-At-nq7"/>
+                        <outlet property="getOrCancelButton" destination="Mss-Xz-EZm" id="tsr-uw-kqI"/>
+                        <outlet property="imageView" destination="1SX-ee-zDf" id="qeI-7f-3CD"/>
+                        <outlet property="statusLabel" destination="r4v-YE-Woq" id="BBe-FA-d2D"/>
+                        <outlet property="urlText" destination="00z-MY-7xa" id="zT3-Yc-UwQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vRz-Pe-fRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1037" y="959"/>
+        </scene>
+        <!--SimpleFTPSample-->
+        <scene sceneID="6MC-g0-7x5">
+            <objects>
+                <tabBarController id="XHU-1D-nc3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="SimpleFTPSample" id="Yzr-an-I2H">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="p2A-HP-Jch">
+                            <connections>
+                                <action selector="dismissViewController:" destination="XHU-1D-nc3" id="MdY-QO-9GX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="y3b-Jg-ryF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="eMv-KE-Zit" kind="relationship" relationship="viewControllers" id="mAb-55-nXt"/>
+                        <segue destination="rQt-21-2KM" kind="relationship" relationship="viewControllers" id="1Eb-z3-VeB"/>
+                        <segue destination="RLV-0V-Brk" kind="relationship" relationship="viewControllers" id="amv-sN-cNA"/>
+                        <segue destination="rFP-0y-tTf" kind="relationship" relationship="viewControllers" id="0Ow-cM-Qii"/>
+                        <segue destination="QdE-Bz-bOv" kind="relationship" relationship="viewControllers" id="7bb-rQ-8oc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dSM-3X-tIM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327" y="207"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NoImage.png" width="120" height="90"/>
+        <image name="TestImage1.png" width="120" height="90"/>
+        <image name="TestImage2.png" width="120" height="90"/>
+        <image name="TestImage3.png" width="120" height="90"/>
+        <image name="TestImage4.png" width="120" height="90"/>
+        <image name="get.png" width="30" height="30"/>
+        <image name="list.png" width="30" height="30"/>
+        <image name="mkdir.png" width="30" height="30"/>
+        <image name="put.png" width="30" height="30"/>
+    </resources>
+</document>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12E55" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ContactData" representedClassName="ContactData" syncable="YES">
+        <attribute name="customerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postCode" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="UserData" syncable="YES"/>
+    <elements>
+        <element name="ContactData" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="UserData" positionX="160" positionY="192" width="128" height="45"/>
+    </elements>
+</model>

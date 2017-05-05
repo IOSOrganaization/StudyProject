@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6hB-kV-Ocm">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="iZ5-bt-KwI">
+            <objects>
+                <navigationController id="6hB-kV-Ocm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ggn-LW-ikk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AM4-Hw-bQr" kind="relationship" relationship="rootViewController" id="0Ry-dO-g4S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EOm-rq-ZBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="810" y="-84"/>
+        </scene>
+        <!--CustomContentAccessibility(Lanscape)-->
+        <scene sceneID="9Wb-Kz-sF7">
+            <objects>
+                <viewController id="AM4-Hw-bQr" customClass="CustomContentAccessibility" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3wf-Zo-ISB"/>
+                        <viewControllerLayoutGuide type="bottom" id="GYR-4k-17H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VWg-uK-R57">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lB-61-WIG" customClass="APLTitleView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="63"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sample Map" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nd4-jx-DMD">
+                                        <rect key="frame" x="252" y="21" width="97.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="8bM-iO-Chl"/>
+                                    <constraint firstAttribute="width" constant="450" id="Dj8-lw-Bsx"/>
+                                    <constraint firstAttribute="centerX" secondItem="nd4-jx-DMD" secondAttribute="centerX" id="gsI-ey-poS"/>
+                                    <constraint firstAttribute="centerY" secondItem="nd4-jx-DMD" secondAttribute="centerY" id="xJi-rU-npS"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Dj8-lw-Bsx"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="titleLabel" destination="nd4-jx-DMD" id="67Z-FZ-jxo"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEO-9e-U4u" customClass="APLElevatorControl">
+                                <rect key="frame" x="0.0" y="225" width="75" height="150"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Nlk-5G-oWB"/>
+                                    <constraint firstAttribute="width" constant="75" id="fsq-tv-fPT"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="floorChanged:" destination="AM4-Hw-bQr" eventType="valueChanged" id="aOD-AX-Fzk"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZA-cf-4B3" customClass="APLFloorPlanView">
+                                <rect key="frame" x="75" y="127" width="450" height="398"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSm-nb-AcV" customClass="APLCoffeeControl">
+                                <rect key="frame" x="225" y="525" width="150" height="75"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="3Ue-7y-xzi"/>
+                                    <constraint firstAttribute="width" constant="150" id="Oge-SD-o8A"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="coffeeChanged:" destination="AM4-Hw-bQr" eventType="valueChanged" id="2lW-Za-dqw"/>
+                                    <outletCollection property="gestureRecognizers" destination="qbV-Lx-PJC" appends="YES" id="z5X-sh-Gd5"/>
+                                    <outletCollection property="gestureRecognizers" destination="9G9-vZ-Wl8" appends="YES" id="hDJ-mY-AVG"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="cEO-9e-U4u" firstAttribute="leading" secondItem="VWg-uK-R57" secondAttribute="leadingMargin" id="4BE-Cc-xZj"/>
+                            <constraint firstAttribute="centerY" secondItem="cEO-9e-U4u" secondAttribute="centerY" id="5fk-HZ-pB7"/>
+                            <constraint firstItem="1lB-61-WIG" firstAttribute="leading" secondItem="VWg-uK-R57" secondAttribute="leading" id="Jrs-Hy-Cn1"/>
+                            <constraint firstItem="xZA-cf-4B3" firstAttribute="top" secondItem="1lB-61-WIG" secondAttribute="bottom" id="Ox7-zW-Sgd"/>
+                            <constraint firstAttribute="trailing" secondItem="1lB-61-WIG" secondAttribute="trailing" id="Rc7-Ra-vaJ"/>
+                            <constraint firstItem="cEO-9e-U4u" firstAttribute="leading" secondItem="VWg-uK-R57" secondAttribute="leading" id="Uj6-1O-l3J"/>
+                            <constraint firstAttribute="trailing" secondItem="xZA-cf-4B3" secondAttribute="trailing" constant="75" id="Xg7-Vl-F3a"/>
+                            <constraint firstAttribute="centerX" secondItem="qSm-nb-AcV" secondAttribute="centerX" id="ec3-rW-bUd"/>
+                            <constraint firstItem="qSm-nb-AcV" firstAttribute="top" secondItem="xZA-cf-4B3" secondAttribute="bottom" id="iWg-r1-0hG"/>
+                            <constraint firstAttribute="centerX" secondItem="1lB-61-WIG" secondAttribute="centerX" id="naq-T8-D6T"/>
+                            <constraint firstItem="xZA-cf-4B3" firstAttribute="leading" secondItem="cEO-9e-U4u" secondAttribute="trailing" id="u5S-Px-VyJ"/>
+                            <constraint firstItem="1lB-61-WIG" firstAttribute="top" secondItem="3wf-Zo-ISB" secondAttribute="bottom" id="xsJ-yO-qnv"/>
+                            <constraint firstItem="GYR-4k-17H" firstAttribute="top" secondItem="qSm-nb-AcV" secondAttribute="bottom" id="yLQ-p8-o9e"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4BE-Cc-xZj"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="CustomContentAccessibility(Lanscape)" id="R9a-jy-3hR">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="ZHB-TA-Y6c">
+                            <connections>
+                                <action selector="dismissViewController:" destination="AM4-Hw-bQr" id="kdl-nc-ceq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="coffeeControl" destination="qSm-nb-AcV" id="zB5-MF-paN"/>
+                        <outlet property="elevatorControl" destination="cEO-9e-U4u" id="6vB-OX-gwW"/>
+                        <outlet property="floorPlanView" destination="xZA-cf-4B3" id="0Nv-qP-ww6"/>
+                        <outlet property="titleView" destination="1lB-61-WIG" id="Jq2-ta-3E1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9T-jk-wtj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="eH7-3u-v5Q" customClass="CustomContentAccessibilityDelegate">
+                    <connections>
+                        <outlet property="viewController" destination="AM4-Hw-bQr" id="gUO-a7-LDd"/>
+                    </connections>
+                </customObject>
+                <swipeGestureRecognizer direction="left" id="qbV-Lx-PJC">
+                    <connections>
+                        <action selector="handleSwipe:" destination="qSm-nb-AcV" id="7An-Rx-JCN"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="9G9-vZ-Wl8">
+                    <connections>
+                        <action selector="handleSwipe:" destination="qSm-nb-AcV" id="dAZ-wf-5Kd"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1509" y="-84"/>
+        </scene>
+    </scenes>
+</document>

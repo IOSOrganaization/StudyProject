@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hFN-MR-1GP">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="XAW-Pa-JsC">
+            <objects>
+                <navigationController id="hFN-MR-1GP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8xd-Zj-5dd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Xtp-zY-a5r" kind="relationship" relationship="rootViewController" id="QbO-tC-d6Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LRK-vW-w5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-591" y="223"/>
+        </scene>
+        <!--ADMagazine(Bunnies Today)-->
+        <scene sceneID="U8n-DT-zgF">
+            <objects>
+                <viewController id="Xtp-zY-a5r" customClass="MagazineViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MEH-my-cP1"/>
+                        <viewControllerLayoutGuide type="bottom" id="a1Z-Fu-OyO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DAj-Hv-aNj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeJ-eg-NWI">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Xtp-zY-a5r" id="lXd-9G-eOX"/>
+                                </connections>
+                            </scrollView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jhe-OO-vgl">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="IHd-mG-3pZ"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Previous" id="9iW-aH-W13">
+                                        <connections>
+                                            <action selector="prevImage" destination="Xtp-zY-a5r" id="CcA-M2-tkA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dlf-op-TMf"/>
+                                    <barButtonItem title="Next" id="vmI-8m-8d9">
+                                        <connections>
+                                            <action selector="nextImage" destination="Xtp-zY-a5r" id="ccV-IE-7b4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JeJ-eg-NWI" firstAttribute="leading" secondItem="DAj-Hv-aNj" secondAttribute="leading" id="IXD-7Z-w4C"/>
+                            <constraint firstItem="Jhe-OO-vgl" firstAttribute="leading" secondItem="DAj-Hv-aNj" secondAttribute="leading" id="IYU-hL-NNc"/>
+                            <constraint firstAttribute="trailing" secondItem="JeJ-eg-NWI" secondAttribute="trailing" id="NOn-Zg-iW2"/>
+                            <constraint firstItem="Jhe-OO-vgl" firstAttribute="top" secondItem="JeJ-eg-NWI" secondAttribute="bottom" id="RYZ-4I-STs"/>
+                            <constraint firstItem="JeJ-eg-NWI" firstAttribute="top" secondItem="MEH-my-cP1" secondAttribute="bottom" id="Sh2-7M-nei"/>
+                            <constraint firstItem="a1Z-Fu-OyO" firstAttribute="top" secondItem="Jhe-OO-vgl" secondAttribute="bottom" id="hbD-uM-6x0"/>
+                            <constraint firstAttribute="trailing" secondItem="Jhe-OO-vgl" secondAttribute="trailing" id="rYO-Id-61v"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ADMagazine(Bunnies Today)" id="m8D-Ny-pOZ">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="fPy-1t-u2R">
+                            <connections>
+                                <action selector="dismissViewController:" destination="Xtp-zY-a5r" id="tqV-H7-mc3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="scrollView" destination="JeJ-eg-NWI" id="XP2-C4-BSE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iZg-bM-27q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="83" y="223"/>
+        </scene>
+    </scenes>
+</document>

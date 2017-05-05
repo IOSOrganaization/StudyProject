@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mPD-PB-O4W">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="x0k-IZ-DDf">
+            <objects>
+                <navigationController id="mPD-PB-O4W" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Kg-JA-zLI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="P7r-4N-oxO" kind="relationship" relationship="rootViewController" id="ZfO-cn-QZZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRp-Az-kbr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200" y="238"/>
+        </scene>
+        <!--LoadPresetDemo-->
+        <scene sceneID="N4O-0F-o4j">
+            <objects>
+                <viewController id="P7r-4N-oxO" customClass="LoadPresetDemoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jFw-sw-BPz"/>
+                        <viewControllerLayoutGuide type="bottom" id="y52-QB-afb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cjy-OW-6ri">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4JY-y5-xit">
+                                <rect key="frame" x="0.0" y="94" width="600" height="30"/>
+                                <state key="normal" title="Trombone">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadPresetOne:" destination="P7r-4N-oxO" eventType="touchDown" id="4Oe-te-Lwj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdM-aQ-Bmq">
+                                <rect key="frame" x="0.0" y="124" width="600" height="30"/>
+                                <state key="normal" title="Vibraphone">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadPresetTwo:" destination="P7r-4N-oxO" eventType="touchDown" id="2jj-O0-RpO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Current Preset:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y43-4c-LpT">
+                                <rect key="frame" x="50" y="74" width="123.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Node" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Zf-k9-ina">
+                                <rect key="frame" x="183" y="74" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m30-4P-j57">
+                                <rect key="frame" x="10" y="164" width="66" height="30"/>
+                                <state key="normal" title="Low Note"/>
+                                <connections>
+                                    <action selector="startPlayLowNote:" destination="P7r-4N-oxO" eventType="touchDown" id="J1R-zr-FKP"/>
+                                    <action selector="startPlayLowNote:" destination="P7r-4N-oxO" eventType="touchDragEnter" id="ukd-fg-1Qk"/>
+                                    <action selector="stopPlayLowNote:" destination="P7r-4N-oxO" eventType="touchUpInside" id="bYf-VB-KZU"/>
+                                    <action selector="stopPlayLowNote:" destination="P7r-4N-oxO" eventType="touchDragExit" id="ehO-w2-Fhk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7Z-gj-WVK">
+                                <rect key="frame" x="96" y="164" width="63" height="30"/>
+                                <state key="normal" title="Mid Note">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startPlayMidNote:" destination="P7r-4N-oxO" eventType="touchDragEnter" id="Hqk-6d-6KO"/>
+                                    <action selector="startPlayMidNote:" destination="P7r-4N-oxO" eventType="touchDown" id="JfR-vs-zUh"/>
+                                    <action selector="stopPlayMidNote:" destination="P7r-4N-oxO" eventType="touchDragExit" id="A9Z-El-voU"/>
+                                    <action selector="stopPlayMidNote:" destination="P7r-4N-oxO" eventType="touchUpInside" id="ObV-BK-nsZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNN-WZ-QZP">
+                                <rect key="frame" x="179" y="164" width="69" height="30"/>
+                                <state key="normal" title="High Note">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startPlayHighNote:" destination="P7r-4N-oxO" eventType="touchDragEnter" id="7vQ-9O-Z3A"/>
+                                    <action selector="startPlayHighNote:" destination="P7r-4N-oxO" eventType="touchDown" id="LVW-6o-vUP"/>
+                                    <action selector="stopPlayHighNote:" destination="P7r-4N-oxO" eventType="touchUpInside" id="jdv-iN-MiB"/>
+                                    <action selector="stopPlayMidNote:" destination="P7r-4N-oxO" eventType="touchDragExit" id="Pn1-ym-QBh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4JY-y5-xit" firstAttribute="top" secondItem="3Zf-k9-ina" secondAttribute="bottom" id="0Qw-sS-Lfz"/>
+                            <constraint firstItem="y43-4c-LpT" firstAttribute="top" secondItem="jFw-sw-BPz" secondAttribute="bottom" constant="10" id="5Ds-b8-I9H"/>
+                            <constraint firstItem="QNN-WZ-QZP" firstAttribute="leading" secondItem="S7Z-gj-WVK" secondAttribute="trailing" constant="20" id="A0O-eR-crx"/>
+                            <constraint firstItem="m30-4P-j57" firstAttribute="top" secondItem="kdM-aQ-Bmq" secondAttribute="bottom" constant="10" id="Bok-pW-AHB"/>
+                            <constraint firstItem="m30-4P-j57" firstAttribute="top" secondItem="S7Z-gj-WVK" secondAttribute="top" id="GnB-h8-L3c"/>
+                            <constraint firstAttribute="centerX" secondItem="y43-4c-LpT" secondAttribute="centerX" id="JZu-98-IFA"/>
+                            <constraint firstItem="S7Z-gj-WVK" firstAttribute="leading" secondItem="m30-4P-j57" secondAttribute="trailing" constant="20" id="Kph-su-ubC"/>
+                            <constraint firstItem="y43-4c-LpT" firstAttribute="top" secondItem="4JY-y5-xit" secondAttribute="top" constant="10" id="NHr-DJ-ha9"/>
+                            <constraint firstItem="y43-4c-LpT" firstAttribute="baseline" secondItem="3Zf-k9-ina" secondAttribute="baseline" id="PDK-bh-dvD"/>
+                            <constraint firstItem="m30-4P-j57" firstAttribute="top" secondItem="QNN-WZ-QZP" secondAttribute="top" id="PjA-sx-JMD"/>
+                            <constraint firstAttribute="trailing" secondItem="kdM-aQ-Bmq" secondAttribute="trailing" id="QWD-ER-ouZ"/>
+                            <constraint firstItem="m30-4P-j57" firstAttribute="leading" secondItem="Cjy-OW-6ri" secondAttribute="leading" constant="10" id="Qgq-wt-s9b"/>
+                            <constraint firstItem="4JY-y5-xit" firstAttribute="top" secondItem="y43-4c-LpT" secondAttribute="top" id="RJL-i7-2vH"/>
+                            <constraint firstAttribute="trailing" secondItem="4JY-y5-xit" secondAttribute="trailing" id="Xmq-Ts-Tod"/>
+                            <constraint firstItem="3Zf-k9-ina" firstAttribute="leading" secondItem="y43-4c-LpT" secondAttribute="trailing" constant="10" id="bKb-ZQ-TmZ"/>
+                            <constraint firstItem="4JY-y5-xit" firstAttribute="leading" secondItem="Cjy-OW-6ri" secondAttribute="leading" id="chI-Zu-s8K"/>
+                            <constraint firstItem="4JY-y5-xit" firstAttribute="top" secondItem="jFw-sw-BPz" secondAttribute="bottom" constant="10" id="d6b-Ta-BTC"/>
+                            <constraint firstItem="kdM-aQ-Bmq" firstAttribute="leading" secondItem="Cjy-OW-6ri" secondAttribute="leading" id="eFr-PW-feW"/>
+                            <constraint firstItem="y43-4c-LpT" firstAttribute="leading" secondItem="Cjy-OW-6ri" secondAttribute="leading" constant="50" id="nsx-OG-OW4"/>
+                            <constraint firstItem="kdM-aQ-Bmq" firstAttribute="top" secondItem="4JY-y5-xit" secondAttribute="bottom" id="rQ8-Pa-OdN"/>
+                            <constraint firstItem="4JY-y5-xit" firstAttribute="top" secondItem="3Zf-k9-ina" secondAttribute="bottom" id="tJz-Jq-53S"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JZu-98-IFA"/>
+                                <exclude reference="NHr-DJ-ha9"/>
+                                <exclude reference="0Qw-sS-Lfz"/>
+                                <exclude reference="RJL-i7-2vH"/>
+                                <exclude reference="d6b-Ta-BTC"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="LoadPresetDemo" id="0Hr-Ui-Nka">
+                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="gu2-Xo-d4W">
+                            <connections>
+                                <action selector="dismissViewController:" destination="P7r-4N-oxO" id="Yfp-GC-POV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="currentPresetLabel" destination="3Zf-k9-ina" id="fXg-s7-ue5"/>
+                        <outlet property="highNoteButton" destination="QNN-WZ-QZP" id="msz-Mk-VpT"/>
+                        <outlet property="lowNoteButton" destination="m30-4P-j57" id="RlX-hq-lGD"/>
+                        <outlet property="midNoteButton" destination="S7Z-gj-WVK" id="Yax-yA-MUD"/>
+                        <outlet property="presetOneButton" destination="4JY-y5-xit" id="ldx-3f-lhF"/>
+                        <outlet property="presetTwoButton" destination="kdM-aQ-Bmq" id="xg2-6g-QRh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f2l-Uk-WjG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="899" y="238"/>
+        </scene>
+    </scenes>
+</document>

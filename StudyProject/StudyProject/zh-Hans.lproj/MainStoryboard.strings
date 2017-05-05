@@ -1,0 +1,21 @@
+
+/* Class = "IBUITabBarItem"; title = "Item 2"; ObjectID = "1xF-bQ-qFy"; */
+"1xF-bQ-qFy.title" = "Item 2";
+
+/* Class = "IBUITabBarController"; title = "程序入口"; ObjectID = "GkR-Sj-U69"; */
+"GkR-Sj-U69.title" = "程序入口";
+
+/* Class = "IBUITabBarItem"; title = "Item"; ObjectID = "Iel-6E-nw1"; */
+"Iel-6E-nw1.title" = "Item";
+
+/* Class = "IBUIViewController"; title = "WebView"; ObjectID = "dTo-6w-uPz"; */
+"dTo-6w-uPz.title" = "WebView";
+
+/* Class = "IBUITextField"; placeholder = "请输入网址..."; ObjectID = "pDx-q5-G8P"; */
+"pDx-q5-G8P.placeholder" = "请输入网址...";
+
+/* Class = "IBUITextField"; text = "http://www.apple.com"; ObjectID = "pDx-q5-G8P"; */
+"pDx-q5-G8P.text" = "http://www.apple.com";
+
+/* Class = "IBUILabel"; text = "Web View"; ObjectID = "wz1-fm-SVy"; */
+"wz1-fm-SVy.text" = "Web View";
